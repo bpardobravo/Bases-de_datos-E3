@@ -123,6 +123,23 @@
         </div>
     </section>
 
+<!-- seven -->
+    <section id="one" class="wrapper post bg-img" data-bg="Imagen_1">
+        <div class="inner">
+            <article class="box">
+                <header>
+                    <h2>Mostrar todas las navieras.</h2>
+                </header>
+                <div class="content">
+                    <form align="center" action="consultas/prueba.php" method="post">
+                    Click aqui:
+                    </form>
+                </div>
+            </article>
+        </div>
+        <a href="#two" class="more">Más consultas</a>
+    </section>
+
 <!-- Scripts -->
     <script src="styles/js/jquery.min.js"></script>
     <script src="styles/js/jquery.scrolly.min.js"></script>
