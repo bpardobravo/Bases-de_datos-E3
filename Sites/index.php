@@ -139,6 +139,23 @@
                 </div>
             </article>
         </div>
+        <a href="#eight" class="more">Más consultas</a>
+    </section>
+<!-- eight -->
+    <section id="eight" class="wrapper post bg-img" data-bg="Imagen_8">
+        <div class="inner">
+            <article class="box">
+                <header>
+                    <h2>Mostrar puertos</h2>
+                </header>
+                <div class="content">
+                    <form align="center" action="consultas/consulta_puertos.php" method="post">
+                        <br/><br/>
+                        <input type="submit" value="Buscar">
+                    </form>
+                </div>
+            </article>
+        </div>
     </section>
 
 <!-- Scripts -->

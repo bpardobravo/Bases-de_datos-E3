@@ -3,12 +3,14 @@
 <body class="subpage">
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-  require("../config/conexion2.php");
+  require("../config/conexion.php");
 
   #Se obtiene el valor del input del usuario
-$naviera = $_GET["val"];
+$inicio = $_POST["fechaini"];
+$fin = $_POST["fechafin"];
+$puerto = $_POST["puerto"];
   #Se construye la consulta como un string
-    $query = "SELECT bnombre, patente, tipo FROM buque WHERE nid = $naviera;";
+    $query = "SELECT * from capacidad_instalacion('" .$inicio ."','" .$fin ."'," .$puerto .");";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
 	$result = $db -> prepare($query);
@@ -19,60 +21,56 @@ $naviera = $_GET["val"];
         <div class="inner">
             <article class="box">
                 <header>
-                    <h2>Buques petróleo</h2>
+                    <h2>Fechas disponibles</h2>
                 </header>
                 <div class="content">
                 <table>
                     <tr>
-                    <th>Nombre Buque</th><th>Patente</th><th>Tipo</th>
+                    <th>Identificación instalación</th><th>Fecha</th>
                     </tr>
                     <?php
                         // echo $atraques;
-                        foreach ($buque as $c) {
-			if ($c[2] == "petrolero"){
-                        echo "<tr><td>$c[0]</td><td>$c[1]</td><td>$c[2]</td></tr>";
+			foreach ($buque as $c) {
+                        echo "<tr><td>$c[0]</td><td>$c[1]</td></tr>";
 			}
-                    }
                     ?>
                     
                 </table>
-		<header>
-                    <h2>Buques carga</h2>
+            </article>
+        </div>
+    </section>
+	<?php
+  #Llama a conexión, crea el objeto PDO y obtiene la variable $db
+  require("../config/conexion.php");
+
+  #Se obtiene el valor del input del usuario
+  #Se construye la consulta como un string
+    $query = "SELECT * from promedio_uso('" .$inicio ."','" .$fin ."'," .$puerto .");";
+
+  #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
+	$result = $db -> prepare($query);
+	$result -> execute();
+	$buque = $result -> fetchAll();
+  ?>    
+    <section id="post" class="wrapper bg-img" data-bg="Imagen_1.jpg">
+        <div class="inner">
+            <article class="box">
+                <header>
+                    <h2>Promedios de uso</h2>
                 </header>
                 <div class="content">
                 <table>
                     <tr>
-                    <th>Nombre Buque</th><th>Patente</th><th>Tipo</th>
+                    <th>Identificación instalación</th><th>Porcentaje de uso</th>
                     </tr>
                     <?php
                         // echo $atraques;
-                        foreach ($buque as $c) {
-			if ($c[2] == "carga"){
-                        echo "<tr><td>$c[0]</td><td>$c[1]</td><td>$c[2]</td></tr>";
-			}
-                    }
-                    ?>
-                    
-                </table>
-		<header>
-                    <h2>Buques pesquero</h2>
-                </header>
-                <div class="content">
-                <table>
-                    <tr>
-                    <th>Nombre Buque</th><th>Patente</th><th>Tipo</th>
-                    </tr>
-                    <?php
-                        // echo $atraques;
-                        foreach ($buque as $c) {
-			if ($c[2] == "pesquero"){
-                        echo "<tr><td>$c[0]</td><td>$c[1]</td><td>$c[2]</td></tr>";
-                    }
+			foreach ($buque as $c) {
+                        echo "<tr><td>$c[0]</td><td>$c[1]</td></tr>";
 			}
                     ?>
                     
                 </table>
-                </div>
             </article>
         </div>
     </section>
