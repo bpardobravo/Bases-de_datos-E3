@@ -1,6 +1,6 @@
 <?php
 require("../config/conexion2.php");
-
+echo $_POST;
 if(isset($_POST['submit'])&&!empty($_POST['submit'])){
 
     $name = $_POST["nombre_usuario"];
