@@ -2403,6 +2403,8 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="date"],
+	input[type="number"],
 	select,
 	textarea {
 		background: rgba(144, 144, 144, 0.075);
@@ -3813,7 +3815,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
-		background-image: url('/styles/images/Imagen_1.png');
+		background-image: url(https://www.esan.edu.pe/conexion/actualidad/2015/09/17/Callao_Puerto/Callao_Puerto_Principal.jpg);
 	}
 
 		#post .inner {
@@ -3988,7 +3990,7 @@
 			position: absolute;
 			top: 0;
 			width: 100%;
-			background-image: url('/styles/images/Imagen_1.png');
+			background-image: url(https://www.esan.edu.pe/conexion/actualidad/2015/09/17/Callao_Puerto/Callao_Puerto_Principal.jpg);
 			z-index: 1;
 		}
 
@@ -4431,3 +4433,6 @@
 			}
 
 		}
+#one {
+	background-image: url('../images/Imagen_2.png');
+}

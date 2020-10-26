@@ -8,10 +8,10 @@
                 <div class="content">
                     <form align="center" action="confirmacion_registro.php" method="get">
                         Nombre de usuario:
-                        <input type="text" name="nombre_usuario" placeholder='Nombre Apellido'>
+                        <input type="text" name="nombre_usuario" placeholder='Nombre Apellido' require>
                         <br/>
                         Edad:
-                        <input type="text" name="edad" placeholder='20'>
+                        <input type="text" name="edad" placeholder='20' require>
                         <br/>
                         Sexo:
                         <br/>
@@ -23,13 +23,13 @@
                         <label for="other">Otro</label><br>
                         <br/>
                         Nacionalidad:
-                        <input type="text" name="nacionalidad" placeholder='Chile'>
+                        <input type="text" name="nacionalidad" placeholder='Chile' require>
                         <br/>
                         Número de pasaporte:
-                        <input type="text" name="numero_pasaporte" placeholder='12345678-9'>
+                        <input type="text" name="numero_pasaporte" placeholder='12345678-9' require>
                         <br/>
                         Contraseña:
-                        <input type="password" name="contraseña">
+                        <input type="password" name="contraseña" require>
                         <br/><br/>
                         <input type="submit" value="Registrarme">
                     </form>

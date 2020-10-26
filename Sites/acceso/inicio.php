@@ -28,7 +28,7 @@
                     <h2 align="center">Ver listado de navieras</h2>
                 </header>
                 <div class='content'>
-                    <form align="center" action="perfil_persona.php" method="get">
+                    <form align="center" action="../consultas/consulta_navieras.php" method="get">
                         <input type="submit" value="Ver">
                     </form>
                 </div>
@@ -38,7 +38,7 @@
                     <h2 align="center">Ver listado de puertos</h2>
                 </header>
                 <div class='content'>
-                    <form align="center" action="perfil_persona.php" method="get">
+                    <form align="center" action="../consultas/consulta_puertos.php" method="get">
                         <input type="submit" value="Ver">
                     </form>
                 </div>

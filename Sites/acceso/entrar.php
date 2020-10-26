@@ -1,6 +1,6 @@
 <?php include('../templates/generic.html');   ?>
-<body class="subpage">
-    <section id="post" class="wrapper bg-img" data-bg="Imagen_2.jpg">
+<body>
+    <section id="one" class="wrapper post bg-img" data-bg="Imagen_1">
         <div class="inner">
             <article class="box">
                 <h2  align="center">¡Que bueno que has vuelto!</h2>
@@ -8,10 +8,10 @@
                 <div class="content">
                     <form align="center" action="confirmacion_entrar.php" method="get">
                         Nombre de usuario:
-                        <input type="text" name="nombre_usuario" placeholder='Nombre Apellido'>
+                        <input type="text" name="nombre_usuario" placeholder='Nombre Apellido' required>
                         <br/>
                         Contraseña:
-                        <input type="text" name="contraseña">
+                        <input type="password" name="contraseña" required>
                         <br/><br/>
                         <input type="submit" value="Entrar">
                     </form>

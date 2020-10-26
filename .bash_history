@@ -175,3 +175,39 @@ cd ..
 cd Entrega3
 ls
 cd ..
+git status
+git add .
+git pull
+ls
+cd Sites
+ls
+rm -rf index.php
+ls
+cd Sites
+ls
+cd ..
+cd Entrega3
+ls
+cd ..
+ls
+rm -rf Sites
+ls
+git status
+git config --global -e
+rm -rf .gitconfig
+git status
+git branch
+git add .
+git commit -m 'solve conflicts sites'
+git config --global user.email "mpbascunan@uc.cl"
+git config --global user.name "mpbascunan"
+git commit -m 'solve conflicts sites'
+git push
+git push origin main
+kas
+git status
+git add .
+git commit -m 'add .gitconfig'
+git push
+git push origin main
+git status
