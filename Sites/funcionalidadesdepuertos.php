@@ -61,6 +61,9 @@ $idpuerto = $_GET["val"];
                         (completar si tu tipo de instalación es astillero):
                         <br/>
                         <input type="date" id="fecha_2" name="fecha_2">
+                        <?php
+                        echo '<input type="hidden" name="puerto" value=' .$idpuerto .'>';
+                        ?>
                         <br/><br/>
                         <input type="submit" value="Buscar">
                     </form>

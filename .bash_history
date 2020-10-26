@@ -251,3 +251,23 @@ git status
 cd Entrega2
 ls
 cd ..
+git status
+cd Entrega2
+ls
+cd ..
+git add -A
+git commit -m"se añaden cambios"
+git push origin main
+git status
+git pull origin main
+cd Entrega2
+ls
+git status
+git pull origin main
+git status
+git commit -m"tabla jefes"
+git pull origin main
+git status
+git commit -m"procedimiento para insertar personas"
+git push origin main
+psql
