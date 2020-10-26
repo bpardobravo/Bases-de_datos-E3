@@ -27,12 +27,12 @@ $puerto = $_POST["puerto"];
         <div class="inner">
             <article class="box">
                 <header>
-                    <h2>Fechas disponibles</h2>
+                    <h2>Instalaciones ocupadas que tienen capacidad</h2>
                 </header>
                 <div class="content">
                 <table>
                     <tr>
-                    <th>Identificación instalación</th><th>Ocupados</th><th>Cantidad límite</th>
+                    <th>Identificación instalación</th><th>Ocupados</th><th>Capacidad máxima</th>
                     </tr>
                     <?php
                         echo $puerto;
@@ -43,7 +43,7 @@ $puerto = $_POST["puerto"];
                             echo "<br/>yess<br/>";
                         }
                         foreach ($buque as $a) {
-                            echo "<tr><td>$a[0]</td><td>$a[1]</td><td>$a[1]</td></tr>";
+                            echo "<tr><td>$a[0]</td><td>$a[1]</td><td>$a[2]</td></tr>";
                         }
                     ?>
                     
@@ -57,7 +57,7 @@ $puerto = $_POST["puerto"];
 
   #Se obtiene el valor del input del usuario
   #Se construye la consulta como un string
-    $query = "SELECT * from promedio_uso('" .$inicio ."','" .$fin ."'," .$puerto .");";
+    $query = "SELECT instalaciones.iid, instalaciones.capacidad from instalaciones, puertosinstalaciones, puertos where puertos.pid = puertosinstalaciones.pid and instalaciones.iid = puertosinstalaciones.iid and puertos.pid = $puerto and instalaciones.iid not in (select instalaciones.iid from instalaciones, (select instalaciones_validas.iid, instalaciones_validas.capacidad, count(permisos.atraque) as cantidad from permisos, permisootorgado, (select instalaciones.iid, instalaciones.capacidad from instalaciones, puertosinstalaciones, puertos where puertos.pid = $puerto and puertos.pid = puertosinstalaciones.pid and puertosinstalaciones.iid = instalaciones.iid and instalaciones.tipo = '$instalacion') as instalaciones_validas where permisos.peid = permisootorgado.peid and permisootorgado.iid = instalaciones_validas.iid and permisos.atraque >= '$fecha_1 00:00:00' and permisos.atraque <= '$fecha_1 23:59:59' group by instalaciones_validas.iid, instalaciones_validas.capacidad) as instalaciones_validas where instalaciones.capacidad > instalaciones_validas.cantidad and instalaciones.iid = instalaciones_validas.iid)";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
 	$result = $db -> prepare($query);
@@ -68,18 +68,18 @@ $puerto = $_POST["puerto"];
         <div class="inner">
             <article class="box">
                 <header>
-                    <h2>Promedios de uso</h2>
+                    <h2>Instalaciones que no han sido reservadas para esa fecha</h2>
                 </header>
                 <div class="content">
                 <table>
                     <tr>
-                    <th>Identificación instalación</th><th>Porcentaje de uso</th>
+                    <th>Identificación instalación</th><th>Capacidad máxima</th>
                     </tr>
                     <?php
                         // echo $atraques;
-			foreach ($buque as $c) {
-                        echo "<tr><td>$c[0]</td><td>$c[1]</td></tr>";
-			}
+                        foreach ($buque as $c) {
+                            echo "<tr><td>$c[0]</td><td>$c[1]</td></tr>";
+                        }
                     ?>
                     
                 </table>
