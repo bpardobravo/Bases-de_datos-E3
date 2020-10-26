@@ -282,3 +282,8 @@ git status
 git add -A
 git commit -m"se agregan cambios"
 git pull origin main
+git pull
+ls
+git pull origin master
+git pull origin main
+exit
