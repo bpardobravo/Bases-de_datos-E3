@@ -211,3 +211,25 @@ git commit -m 'add .gitconfig'
 git push
 git push origin main
 git status
+git add -A
+git status
+git commit -m"Se agregan cambios pendientes"
+git push origin main
+git status
+psql
+\quit
+q
+quit
+psql
+ls
+cd Entrega3
+psql
+cd ..
+psql
+ls
+psql
+psql grupo32stored2
+psql grupo32stored1
+psql
+\q
+exit

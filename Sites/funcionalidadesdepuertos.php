@@ -18,9 +18,9 @@ $idpuerto = $_GET["val"];
                 </header>
                 <div class="content">
                     <form align="center" action="consultas/consulta_capacidad.php" method="post">
-                        Fecha inicial (formato: aaaa-mm-dd):
+                        Fecha inicial:
                         <input type="text" name="fechaini">
-                        Fecha final (formato: aaaa-mm-dd):
+                        Fecha final:
                         <input type="text" name="fechafin">
                         <br/>
 			<?php
@@ -42,26 +42,27 @@ $idpuerto = $_GET["val"];
                     <h2>Consultar capacidad y generar permiso</h2>
                 </header>
                 <div class="content">
-                    <form align="center" action="INSERTARFUNCIONALIDADAQUI.php" method="post">
+                    <form align="center" action="consultas/consulta_capacidad_y_permisos.php" method="post">
                         Tipo de instalación:
                         <br/><br/>
-                        <input type="radio" id="muelle" name="gender" value="muelle">
+                        <input type="radio" id="muelle" name="tipo_instalacion" value="muelle">
                         <label for="muelle">Muelle</label>
-                        <input type="radio" id="astillero" name="gender" value="astillero">
+                        <input type="radio" id="astillero" name="tipo_instalacion" value="astillero">
                         <label for="astillero">Astillero</label>
                         <br/>
                         Patente:
                         <input type="text" name="patente" required>
+                        <br/>
                         Fecha inicial:
                         <br/>
                         <input type="date" id="fecha_1" name="fecha_1" required>
-                        <br/>
-                        Fecha final:
-                        <br/>
-                        <input type="date" id="fecha_2" name="fecha_2" required>
                         <br/><br/>
-                        <input type="submit" value="Buscar como astillero">
-                        <input type="submit" value="Buscar como muelle">
+                        Fecha final:<br/>
+                        (completar si tu tipo de instalación es astillero):
+                        <br/>
+                        <input type="date" id="fecha_2" name="fecha_2">
+                        <br/><br/>
+                        <input type="submit" value="Buscar">
                     </form>
             </article>
         </div>
