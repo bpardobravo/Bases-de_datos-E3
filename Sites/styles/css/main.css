@@ -1628,6 +1628,7 @@
 
 			body, input, select, textarea {
 				font-size: 11pt;
+				background-attachment: fixed;
 			}
 
 		}
@@ -2402,6 +2403,8 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="date"],
+	input[type="number"],
 	select,
 	textarea {
 		background: rgba(144, 144, 144, 0.075);
@@ -3271,7 +3274,6 @@
 
 	body.subpage {
 		padding-top: 0px;
-		background-image: url('https://media.coindesk.com/uploads/2017/01/shipping-port-e1484745616853.jpg');
 	}
 
 	@-moz-keyframes reveal-header {
@@ -3323,7 +3325,7 @@
 	}
 
 	#header {
-		background-color: transparent;
+		background: rgba(0, 0, 0, 0.5);
 		color: #fdd1d1;
 		cursor: default;
 		height: 3.25em;
@@ -3339,7 +3341,7 @@
 
 		#header.alt {
 			top: 0;
-			background: #F64747;
+			background:rgba(0, 0, 0, 0.5);
 		}
 
 		#header .logo {
@@ -3532,7 +3534,6 @@
 			right: 0;
 			text-align: right;
 			top: 0;
-			vertical-align: middle;
 			width: 7em;
 		}
 
@@ -3814,6 +3815,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
+		background-image: url(https://www.esan.edu.pe/conexion/actualidad/2015/09/17/Callao_Puerto/Callao_Puerto_Principal.jpg);
 	}
 
 		#post .inner {
@@ -3988,7 +3990,7 @@
 			position: absolute;
 			top: 0;
 			width: 100%;
-			background-image: url('https://www.esan.edu.pe/conexion/actualidad/2015/09/17/Callao_Puerto/Callao_Puerto_Principal.jpg');
+			background-image: url(https://www.esan.edu.pe/conexion/actualidad/2015/09/17/Callao_Puerto/Callao_Puerto_Principal.jpg);
 			z-index: 1;
 		}
 
@@ -4431,3 +4433,6 @@
 			}
 
 		}
+#one {
+	background-image: url('../images/Imagen_2.png');
+}

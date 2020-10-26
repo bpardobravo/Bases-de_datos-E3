@@ -6,32 +6,30 @@
   require("../config/conexion.php");
 
   #Se obtiene el valor del input del usuario
-  $puerto = strtoupper($_POST["nombre_puerto"]);
 
   #Se construye la consulta como un string
-    $query = "SELECT personal.rut, personal.nombre, personal.edad, personal.sexo FROM puertos, puertosinstalaciones, instalaciones, jefeinstalacion, personal WHERE puertos.pid = puertosinstalaciones.pid AND puertosinstalaciones.iid = instalaciones.iid AND jefeinstalacion.iid = instalaciones.iid AND personal.rut = jefeinstalacion.rut AND upper(puertos.nombre) LIKE '%$puerto%';";
+    $query = "SELECT nombre, pid FROM puertos;";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
 	$result = $db -> prepare($query);
 	$result -> execute();
-	$jefe = $result -> fetchAll();
+	$puerto = $result -> fetchAll();
   ?>
     <section id="post" class="wrapper bg-img" data-bg="Imagen_1.jpg">
         <div class="inner">
             <article class="box">
                 <header>
-                    <h2>Jefes de Instalaciones del puerto.</h2>
+                    <h2>Puertos</h2>
                 </header>
                 <div class="content">
                 <table>
                     <tr>
-                    <th>RUT</th><th>Nombre</th><th>Edad</th><th>Sexo</th>
+                    <th>Nombre de puerto</th>
                     </tr>
                     <?php
-                    echo $puerto;
                         // echo $atraques;
-                        foreach ($jefe as $j) {
-                        echo "<tr><td>$j[0]</td><td>$j[1]</td><td>$j[2]</td><td>$j[3]</td></tr>";
+                        foreach ($puerto as $c) {
+                        echo "<tr><td><a href='../funcionalidadesdepuertos.php?val=$c[1]'>$c[0]</a></td></tr>";
                     }
                     ?>
                     

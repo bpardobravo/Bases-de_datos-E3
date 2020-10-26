@@ -3,35 +3,33 @@
 <body class="subpage">
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-  require("../config/conexion.php");
+  require("../config/conexion2.php");
 
   #Se obtiene el valor del input del usuario
-  $puerto = strtoupper($_POST["nombre_puerto"]);
 
   #Se construye la consulta como un string
-    $query = "SELECT personal.rut, personal.nombre, personal.edad, personal.sexo FROM puertos, puertosinstalaciones, instalaciones, jefeinstalacion, personal WHERE puertos.pid = puertosinstalaciones.pid AND puertosinstalaciones.iid = instalaciones.iid AND jefeinstalacion.iid = instalaciones.iid AND personal.rut = jefeinstalacion.rut AND upper(puertos.nombre) LIKE '%$puerto%';";
+    $query = "SELECT nnombre, nid FROM naviera;";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
 	$result = $db -> prepare($query);
 	$result -> execute();
-	$jefe = $result -> fetchAll();
+	$naviera = $result -> fetchAll();
   ?>
     <section id="post" class="wrapper bg-img" data-bg="Imagen_1.jpg">
         <div class="inner">
             <article class="box">
                 <header>
-                    <h2>Jefes de Instalaciones del puerto.</h2>
+                    <h2>Navieras</h2>
                 </header>
                 <div class="content">
                 <table>
                     <tr>
-                    <th>RUT</th><th>Nombre</th><th>Edad</th><th>Sexo</th>
+                    <th>Nombre de naviera</th>
                     </tr>
                     <?php
-                    echo $puerto;
                         // echo $atraques;
-                        foreach ($jefe as $j) {
-                        echo "<tr><td>$j[0]</td><td>$j[1]</td><td>$j[2]</td><td>$j[3]</td></tr>";
+                        foreach ($naviera as $c) {
+                        echo "<tr><td><a href='consulta_buques_naviera.php?val=$c[1]'>$c[0]</a></td></tr>";
                     }
                     ?>
                     

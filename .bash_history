@@ -145,3 +145,91 @@ cd Entrega2
 ls
 psql
 exit
+git branch
+git checkout master
+ls
+git checkout main
+ls
+cd Entrega2
+ls
+git pull
+git branch --set-upstream-to=origin/master main
+git branch
+git pull origin main
+git pull origin main --allow-unrelated-histories
+cd ..
+l
+ls
+rm -rf .bash_history
+rm -rf .cache/motd.legal-displayed
+rm -rf .psql_history
+git pull origin main --allow-unrelated-histories
+ls
+cd Entrega2
+ls
+git status
+ls
+cd Entrega2
+ls
+cd ..
+cd Entrega3
+ls
+cd ..
+git status
+git add .
+git pull
+ls
+cd Sites
+ls
+rm -rf index.php
+ls
+cd Sites
+ls
+cd ..
+cd Entrega3
+ls
+cd ..
+ls
+rm -rf Sites
+ls
+git status
+git config --global -e
+rm -rf .gitconfig
+git status
+git branch
+git add .
+git commit -m 'solve conflicts sites'
+git config --global user.email "mpbascunan@uc.cl"
+git config --global user.name "mpbascunan"
+git commit -m 'solve conflicts sites'
+git push
+git push origin main
+kas
+git status
+git add .
+git commit -m 'add .gitconfig'
+git push
+git push origin main
+git status
+git add -A
+git status
+git commit -m"Se agregan cambios pendientes"
+git push origin main
+git status
+psql
+\quit
+q
+quit
+psql
+ls
+cd Entrega3
+psql
+cd ..
+psql
+ls
+psql
+psql grupo32stored2
+psql grupo32stored1
+psql
+\q
+exit
