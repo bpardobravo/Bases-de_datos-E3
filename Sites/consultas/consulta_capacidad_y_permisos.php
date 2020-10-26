@@ -76,7 +76,6 @@ $puerto = $_POST["puerto"];
                         echo "<input type='hidden' name='patente' value='$patente'>";
                         echo "<input type='hidden' name='fecha_1' value='$fecha_1'>";
                         echo "<input type='hidden' name='fecha_2' value='$fecha_2'>";
-                        echo "<input type='hidden' name='instalacion' value='$instalacion'>";
                         ?>
                         <br/><br/>
                         <input type="submit" value="Generar permiso">
