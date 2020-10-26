@@ -1,9 +1,19 @@
 <?php
 require("../config/conexion2.php");
-
+$name = $_POST["nombre_usuario"];
+$edad = $_POST["edad"];
+$gender = $_POST["gender"];
+$nac = $_POST["nacionalidad"];
+$npas = $_POST["numero_pasaporte"];
+$contraseña = $_POST["constraseña"];
+echo "$name";
+echo "$edad";
+echo "$gender";
+echo "$nac";
+echo "$npas";
+echo "$contraseña";
 if(!empty($_POST['numero_pasaporte'])&&!empty($_POST['nombre_usuario'])&&!empty($_POST['edad'])&&!empty($_POST['gender'])&&!empty($_POST['nacionalidad'])&&!empty($_POST['constraseña'])){
-// $n = $_POST["numero_pasaporte"];
-// echo "$n";
+
 // if(!empty($n)){
 
     $name = $_POST["nombre_usuario"];
