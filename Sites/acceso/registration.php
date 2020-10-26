@@ -1,5 +1,5 @@
 <?php
-require("../config/conexion.php");
+require("../config/conexion2.php");
 
 if(isset($_POST['submit'])&&!empty($_POST['submit'])){
 
