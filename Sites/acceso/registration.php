@@ -6,7 +6,7 @@ $gender = $_POST["gender"];
 $nac = $_POST["nacionalidad"];
 $npas = $_POST["numero_pasaporte"];
 $contraseña = $_POST["constraseña"];
-echo "$name";
+echo "$name\n";
 echo "$edad";
 echo "$gender";
 echo "$nac";

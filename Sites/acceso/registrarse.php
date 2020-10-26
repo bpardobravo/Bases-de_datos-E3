@@ -29,7 +29,7 @@
                         <input type="text" name="numero_pasaporte" placeholder='12345678-9' required>
                         <br/>
                         Contraseña:
-                        <input type="password" name="contraseña" required>
+                        <input type="text" name="contraseña" required>
                         <br/><br/>
                         <input type="submit" value="Registrarme">
                     </form>
