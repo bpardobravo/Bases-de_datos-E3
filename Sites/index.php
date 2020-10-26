@@ -1,26 +1,23 @@
 <?php include('templates/index.html');   ?>
 <body>
 <!-- one -->
-    <section id="one" class="wrapper post bg-img" data-bg="Imagen_1">
+    <section id="banner" class="wrapper post bg-img" data-bg="Imagen_1">
         <div class="inner">
+                <h1>Bienvenido a la mejor aplicación de navegación.</h1>
             <article class="box">
-                <header>
-                    <h2>Mostrar puertos junto a las ciudades a las que pertenecen.</h2>
-                </header>
                 <div class="content">
-                    <form align="center" action="consultas/consulta_puertos_ciudades.php" method="post">
-                    Nombre del puerto:
-                        <input type="text" name="nombre_puerto">
-                        <br/><br/>
-                        <input type="submit" value="Buscar">
+                    <form align="center" action="acceso/registrarse.php" method="get">
+                        <input type="submit" value="Registrarse">
+                    </form>
+                    <form align="center" action="acceso/entrar.php" method="get">
+                        <input type="submit" value="  Ingresar ">
                     </form>
                 </div>
             </article>
         </div>
-        <a href="#two" class="more">Más consultas</a>
     </section>
 
-<!-- two -->
+<!-- 
     <section id="two" class="wrapper post bg-img" data-bg="Imagen_2">
         <div class="inner">
             <article class="box">
@@ -40,7 +37,7 @@
         <a href="#three" class="more">Más consultas</a>
     </section>
 
-<!-- three -->
+three
     <section id="three" class="wrapper post bg-img" data-bg="Imagen_3">
         <div class="inner">
             <article class="box">
@@ -60,7 +57,7 @@
         <a href="#four" class="more">Más consultas</a>
     </section>
 
-<!-- four -->
+four
     <section id="four" class="wrapper post bg-img" data-bg="Imagen_4">
         <div class="inner">
             <article class="box">
@@ -83,7 +80,7 @@
         <a href="#five" class="more">Más consultas</a>
     </section>
 
-<!-- Five -->
+Five
     <section id="five" class="wrapper post bg-img" data-bg="Imagen_5">
         <div class="inner">
             <article class="box">
@@ -101,62 +98,7 @@
         </div>
         <a href="#six" class="more">Más consultas</a>
     </section>
-
-<!-- six -->
-    <section id="six" class="wrapper post bg-img" data-bg="Imagen_6">
-        <div class="inner">
-            <article class="box">
-                <header>
-                    <h2>Mostrar el puerto que haya recibido más barcos en algún mes de algún año.</h2>
-                </header>
-                <div class="content">
-                    <form align="center" action="consultas/consulta_puerto_con_mas_barcos.php" method="post">
-                        Año:
-                        <input type="text" name="año">
-                        <br/>
-                        Mes (número):
-                        <input type="text" name="mes">
-                        <br/><br/>
-                        <input type="submit" value="Buscar">
-                    </form>
-            </article>
-        </div>
-        <a href="#seven" class="more">Más consultas</a>
-    </section>
-
-<!-- seven -->
-    <section id="seven" class="wrapper post bg-img" data-bg="Imagen_7">
-        <div class="inner">
-            <article class="box">
-                <header>
-                    <h2>Mostrar navieras</h2>
-                </header>
-                <div class="content">
-                    <form align="center" action="consultas/consulta_navieras.php" method="post">
-                        <br/><br/>
-                        <input type="submit" value="Buscar">
-                    </form>
-                </div>
-            </article>
-        </div>
-        <a href="#eight" class="more">Más consultas</a>
-    </section>
-<!-- eight -->
-    <section id="eight" class="wrapper post bg-img" data-bg="Imagen_8">
-        <div class="inner">
-            <article class="box">
-                <header>
-                    <h2>Mostrar puertos</h2>
-                </header>
-                <div class="content">
-                    <form align="center" action="consultas/consulta_puertos.php" method="post">
-                        <br/><br/>
-                        <input type="submit" value="Buscar">
-                    </form>
-                </div>
-            </article>
-        </div>
-    </section>
+Fin -->
 
 <!-- Scripts -->
     <script src="styles/js/jquery.min.js"></script>

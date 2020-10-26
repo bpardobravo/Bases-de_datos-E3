@@ -1,0 +1,251 @@
+bid,patente,tipo,pais_id,bnombre,nid
+0,ZX2922,pesquero,0,Abbotsham,0
+1,PM8536,pesquero,1,Abdiel,0
+2,VC7492,pesquero,2,Abeille,1
+3,LS5992,pesquero,3,Abelardo,2
+4,PJ5481,carga,4,Abelia,3
+5,LX6914,petrolero,5,Abercrombie,4
+6,EH9187,petrolero,5,Aberdeen,5
+7,ST8633,pesquero,6,Aberford,6
+8,EY2745,pesquero,7,Aberfoyle,2
+9,LA5643,petrolero,8,abergavenny,7
+10,AU5998,pesquero,9,Abigail,8
+11,ET5609,pesquero,10,Abingdon,9
+12,MO4425,pesquero,11,abondance,8
+13,BY5212,petrolero,12,aboukir,5
+14,EG8528,pesquero,13,Abrahan,8
+15,QD4440,petrolero,14,Abrams Oferta,5
+16,VX5561,pesquero,14,Abundancia,2
+17,VT6220,carga,6,Abisinia,10
+18,XK7318,pesquero,4,Acacia,1
+19,WW2485,petrolero,15,Acanto,5
+20,HV2199,carga,6,acasta,3
+21,ID7819,pesquero,16,As,1
+22,QA2495,pesquero,17,Acertif,11
+23,WF7217,carga,18,achates,12
+24,BN4195,carga,3,acheron,3
+25,UW2735,carga,19,Achille,13
+26,EF7582,carga,20,Aquiles,13
+27,OT5458,carga,6,Aconito,10
+28,YN4644,pesquero,18,Bellota,0
+29,FS3778,carga,21,Acteon,14
+30,VW7522,pesquero,22,acteon,8
+31,VI4743,pesquero,1,Calypso,1
+32,OJ8771,petrolero,23,Activo,4
+33,OC4762,pesquero,24,Actividad,15
+34,XN4914,carga,25,Agudo,14
+35,XP9141,pesquero,26,Adan y Eva,11
+36,EX4705,petrolero,7,Firme,16
+37,BJ4245,pesquero,27,inflexible II,9
+38,RH8308,carga,28,Agrega un,12
+39,YP3858,pesquero,10,Sumador,15
+40,AL8743,petrolero,11,Adelaide,16
+41,KM2551,petrolero,29,Adepto,16
+42,EI5702,petrolero,30,Admirable,7
+43,RJ2733,petrolero,14,Almirante Devries,4
+44,YG2900,carga,31,Almirante Farragut,17
+45,TO8113,carga,19,Almirantazgo,12
+46,HE7029,petrolero,0,Adonis,18
+47,HB3228,petrolero,2,Habil,4
+48,OF5956,petrolero,32,Adur,19
+49,SG9128,carga,7,Avanzar,14
+50,GO7311,petrolero,22,Ventaja,16
+51,PM7495,pesquero,25,Advantagia,9
+52,GS7205,pesquero,23,Aventuras,8
+53,PU5101,pesquero,25,aventura Galera,0
+54,VP2429,pesquero,22,Premio aventura,2
+55,MO4968,pesquero,23,Adversario,11
+56,BI5654,carga,25,Consejo,12
+57,YB8271,petrolero,8,Premio consejos,20
+58,VT2032,pesquero,19,Asesor,2
+59,MU6547,carga,31,Eneas,14
+60,IW2489,pesquero,22,Eolo,8
+61,IG9597,pesquero,21,Aetna,2
+62,AU6167,carga,4,Affleck,3
+63,JD8184,petrolero,6,Refriega,19
+64,RK2324,petrolero,29,Africa,4
+65,LN6036,pesquero,29,Africaine,2
+66,PZ3477,carga,10,Afridi,10
+67,GM1638,pesquero,18,Afrikander,8
+68,CI3218,petrolero,8,Agamenon,18
+69,UH6836,pesquero,15,Aladdin,0
+70,QJ6353,petrolero,25,Alamein,18
+71,LW4637,carga,13,Alarico,3
+72,SL2391,petrolero,31,Alarma,7
+73,PP3724,petrolero,15,Alaunia II,20
+74,QL4591,carga,8,albacora,13
+75,BF7024,pesquero,24,Alban,1
+76,QI7769,petrolero,7,Albanaise,20
+77,FM3163,pesquero,24,Albany,9
+78,NX3376,carga,32,Albatros,14
+79,XG7925,carga,11,Albemarle,12
+80,KY2131,carga,33,alberni,17
+81,MW6341,petrolero,27,Albert,5
+82,FU8868,pesquero,16,Alberta,9
+83,UH1378,petrolero,31,Albian,20
+84,GT9752,petrolero,23,Albrighton,5
+85,OB9598,petrolero,34,Albuera,16
+86,VR7517,petrolero,18,albury,19
+87,GF5994,petrolero,23,Alcantara,7
+88,HF1544,petrolero,26,Alcaston,4
+89,AI2283,carga,35,blackwall,14
+90,KC2936,petrolero,36,Agua Negra,5
+91,MN1612,pesquero,30,Madera negra,1
+92,OR9516,petrolero,2,Espada,20
+93,OE1789,carga,4,BLAIRMORE,12
+94,WD8846,carga,36,Blake,21
+95,MZ9845,pesquero,30,Blakeney,1
+96,RV9799,petrolero,28,Blanche,5
+97,IV2746,petrolero,4,Blandford,7
+98,TJ7818,petrolero,15,Blankney,4
+99,OF1501,pesquero,36,Blaxton,15
+100,BY4314,petrolero,37,Resplandor,19
+101,AM9504,carga,33,Chaqueta de sport,10
+102,ZV9679,petrolero,22,Blean,18
+103,SV9482,pesquero,16,Bleasdale,11
+104,UL8619,pesquero,0,blencathra,9
+105,LF8633,petrolero,37,Blenheim,7
+106,PR9667,carga,36,Bendicion,14
+107,MZ2239,petrolero,32,Blickling,18
+108,WI9449,pesquero,37,Bligh,15
+109,XG4556,pesquero,10,Rubia,11
+110,HW2014,pesquero,12,Sabueso,9
+111,BZ3311,carga,36,Floracion,12
+112,BB5259,pesquero,13,Flor,1
+113,WC8293,pesquero,22,Campanilla,8
+114,RY9242,petrolero,1,pechiazul,18
+115,OM4230,petrolero,33,Blyth,7
+116,AL1557,carga,28,Boadicea,10
+117,II3534,pesquero,36,bodenham,1
+118,CG7403,pesquero,7,Castillo bodiam,11
+119,WX5990,carga,4,Bogam,3
+120,HE5247,pesquero,38,Negrita,0
+121,HH5023,carga,29,Bolebroke,3
+122,FI2331,pesquero,19,Bolton Castle,2
+123,YB3879,petrolero,19,Bolton,16
+124,OY7209,carga,35,Bombardear,17
+125,NK1201,carga,39,Castillo de Bombay,13
+126,MN4984,petrolero,7,Bombay,16
+127,PA1651,pesquero,18,Bumerang,11
+128,PJ8392,pesquero,29,Buenaventura,9
+129,UE6214,petrolero,39,Bonavoila,7
+130,IJ4552,petrolero,6,Bonetta,19
+131,EF2295,pesquero,1,Bonita,11
+132,RA3983,pesquero,24,Bonito,8
+133,YC1851,pesquero,19,Bonne Ciudadana,11
+134,XL6992,carga,3,Bootle,3
+135,RC8468,pesquero,14,Borraja,0
+136,XH5466,carga,22,Frontera,12
+137,VH2584,carga,39,Boreas,17
+138,CV4539,pesquero,18,Boreham,15
+139,VB9537,petrolero,1,Taladrador,16
+140,OF5460,carga,40,Boscawen,21
+141,EB3227,petrolero,25,Bossington,18
+142,IH6707,pesquero,10,Boston,15
+143,DA9671,pesquero,37,Botha,9
+144,NL7862,pesquero,17,Bottisham,9
+145,UJ2611,pesquero,18,Bouclier,15
+146,PV7666,petrolero,19,Boulogne,7
+147,HH5472,pesquero,29,Boulston,15
+148,KQ3854,pesquero,10,Bravucon,15
+149,ON7101,carga,4,Abundante,14
+150,QC1164,petrolero,23,Generosidad,5
+151,TW7915,pesquero,27,bourbonnaise,9
+152,EI5834,petrolero,38,Bourdelais,16
+153,AI9121,petrolero,26,Bowen,5
+154,YE6286,pesquero,4,Castillo de Bowes,1
+155,PJ3020,petrolero,7,bowmanville,5
+156,IX1197,pesquero,30,Boxer,2
+157,YB1434,pesquero,20,Boyne,11
+158,LD3618,petrolero,29,Braak,5
+159,IF9396,petrolero,15,Braave,5
+160,AY3986,petrolero,18,Bradfield,16
+161,FJ6533,pesquero,31,Bradford,0
+162,SU8617,petrolero,20,Trenza,4
+163,LW6201,pesquero,7,Braithwaite,0
+164,VG7905,carga,27,Brakel,10
+165,SM2508,carga,12,Castillo bramber,3
+166,MY3367,carga,15,Zarza,17
+167,GS9404,carga,11,Bramham,21
+168,HE8199,carga,26,Brampton,17
+169,FA3127,petrolero,40,Brandon,5
+170,DQ3759,carga,0,Branlebas,21
+171,RP8314,carga,39,brantford,17
+172,MJ4934,pesquero,39,Brantingham,15
+173,YX2002,pesquero,18,Valiente,15
+174,EV7485,petrolero,5,Bravo,19
+175,HI7513,petrolero,37,Brayford,18
+176,RO9221,petrolero,41,Descarado,18
+177,TR8211,petrolero,22,Brema,16
+178,FO3430,pesquero,0,brearley,0
+179,LR2069,petrolero,16,Brecon,5
+180,GJ5946,carga,36,Breconshire,12
+181,HB4367,petrolero,32,Breda,7
+182,VY5330,pesquero,22,brenchley,0
+183,WF3051,carga,2,Brereton,13
+184,HI3831,carga,20,Brevdrageren,10
+185,UO8744,pesquero,33,Brezo,11
+186,DV6261,pesquero,20,Bridgewater,6
+187,TS8958,pesquero,21,Castillo bridgnorth,2
+188,LN8777,pesquero,27,Bridlington,2
+189,HK6767,petrolero,31,Bridport,18
+190,HE2921,carga,28,Brigadier,3
+191,BN3951,carga,30,brigandine,12
+192,TG8958,pesquero,23,Bergantin,11
+193,RK9162,pesquero,4,Brigham,15
+194,NQ5495,petrolero,16,Brighton,7
+195,HF4402,carga,19,Brillante,13
+196,IT1233,pesquero,11,Premio brillante,6
+197,FN4513,carga,5,Brinkley,14
+198,OA5815,petrolero,18,Brinton,19
+199,WC2925,carga,3,briseis,21
+200,CC4639,pesquero,38,Energico,8
+201,UZ5981,petrolero,41,Brissenden,7
+202,DK4889,carga,15,Bristol,3
+203,DT6703,petrolero,24,Britania,18
+204,JR2308,pesquero,27,britomart,2
+205,YW8268,carga,41,britanico,17
+206,WK4832,petrolero,13,Brixham,20
+207,NN8091,petrolero,26,Broaderschap,5
+208,AV9914,carga,3,Broadley,10
+209,DC7834,pesquero,5,Sable,8
+210,GS9663,carga,38,broadwater,13
+211,OH1392,petrolero,26,Broadway,18
+212,NP8695,pesquero,11,Brock,8
+213,PV6712,petrolero,33,Brocklesby,20
+214,ZV8179,petrolero,21,brockville,4
+215,OV3558,pesquero,18,Rompi,9
+216,KI7112,carga,0,brolga,10
+217,LV7419,petrolero,5,Bronington,5
+218,DS0478,carga,40,Penelope,17
+219,KH8053,pesquero,20,Premio Dover,6
+220,XB6912,carga,4,Dovey,10
+221,CE1914,petrolero,42,downham,5
+222,RW4421,petrolero,37,Downley,16
+223,UY2987,petrolero,18,Continuar,16
+224,EE2109,carga,17,Premio dragon,13
+225,RQ2918,pesquero,28,Libelula,0
+226,ZC6249,petrolero,13,Pato,7
+227,SQ8557,petrolero,34,Terrible,7
+228,GC3280,pesquero,18,Acorazado,8
+229,NT2280,petrolero,12,Premio Dreadnought,5
+230,PZ1913,carga,17,Conductor,12
+231,NN2774,carga,27,Drochterland,21
+232,PB7290,pesquero,35,Drogheda,9
+233,GE9618,petrolero,12,Dromedario,19
+234,PK9613,carga,33,Dromio,13
+235,CB1716,carga,27,Droxford,10
+236,VI7863,carga,40,Esclava,10
+237,OO2266,pesquero,5,druida,15
+238,VI9753,carga,10,drumheller,17
+239,FE1567,carga,16,drummondville,21
+240,DG5218,carga,11,Drury,14
+241,LI5894,pesquero,2,Driada,0
+242,QJ1463,petrolero,27,dubbo,4
+243,DY6365,carga,9,Dubford,10
+244,OI4579,carga,32,Gulnare,21
+245,TQ5114,carga,24,Gurkha,10
+246,ED5736,petrolero,40,guysborough,7
+247,HP3120,petrolero,16,gympie,19
+248,YT2845,pesquero,6,gitano,6
+249,ZP4420,carga,40,magnolia,10
