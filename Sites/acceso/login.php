@@ -3,7 +3,7 @@ ob_start();
 require("../config/conexion2.php");
  #Se obtiene el valor del input del usuario
 $name = $_POST["nombre_usuario"];
-$npas = $_POST["nro_pasaporte"]
+$npas = $_POST["nro_pasaporte"];
 $contraseña = $_POST["contraseña"];
 
 
