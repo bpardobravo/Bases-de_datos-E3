@@ -1,13 +1,17 @@
 <?php
 require("../config/conexion2.php");
-echo $_POST;
-if(isset($_POST['submit'])&&!empty($_POST['submit'])){
+
+if(isset($_POST['numero_pasaporte'])&&!empty($_POST['numero_pasaporte']&&isset($_POST['nombre_usuario'])&&!empty($_POST['nombre_usuario']
+&&isset($_POST['edad'])&&!empty($_POST['edad']
+&&isset($_POST['gender'])&&!empty($_POST['gender']
+&&isset($_POST['nacionalidad'])&&!empty($_POST['nacionalidad']
+&&isset($_POST['constraseña'])&&!empty($_POST['constraseña'])){
 
     $name = $_POST["nombre_usuario"];
     $edad = $_POST["edad"];
     $gender = $_POST["gender"];
     $nac = $_POST["nacionalidad"];
-    $npas = $_POST["nombre_pasaporte"];
+    $npas = $_POST["numero_pasaporte"];
     $contraseña = $_POST["constraseña"];
 
     $st = $db->prepare("SELECT nro_pasaporte FROM user WHERE nro_pasaporte=$npas;"); 
