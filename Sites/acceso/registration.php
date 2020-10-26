@@ -5,14 +5,14 @@ $edad = $_POST["edad"];
 $gender = $_POST["gender"];
 $nac = $_POST["nacionalidad"];
 $npas = $_POST["numero_pasaporte"];
-$contraseña = $_POST["constraseña"];
+$contraseña = $_POST["contraseña"];
 echo "$name\n";
 echo "$edad";
 echo "$gender";
 echo "$nac";
 echo "$npas";
 echo "$contraseña";
-if(!empty($_POST['numero_pasaporte'])&&!empty($_POST['nombre_usuario'])&&!empty($_POST['edad'])&&!empty($_POST['gender'])&&!empty($_POST['nacionalidad'])&&!empty($_POST['constraseña'])){
+if(!empty($_POST['numero_pasaporte'])&&!empty($_POST['nombre_usuario'])&&!empty($_POST['edad'])&&!empty($_POST['gender'])&&!empty($_POST['nacionalidad'])&&!empty($_POST['contraseña'])){
 
 // if(!empty($n)){
 
