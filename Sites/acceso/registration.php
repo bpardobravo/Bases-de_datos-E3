@@ -26,7 +26,7 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
     
     }
     else {
-        echo "Este/a usuario/a ya existe"
+        echo "Este/a usuario/a ya existe";
     };
 
 }
