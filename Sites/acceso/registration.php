@@ -1,4 +1,5 @@
 <?php
+ob_start();
 require("../config/conexion2.php");
 $name = $_POST["nombre_usuario"];
 $edad = $_POST["edad"];
@@ -46,4 +47,5 @@ if(!empty($_POST['numero_pasaporte'])&&!empty($_POST['nombre_usuario'])&&!empty(
 else {
     echo "Por favor ingrese los datos solicitados";
 };
+ob_end_flush();
 ?>
