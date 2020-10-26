@@ -6,9 +6,12 @@
                 <h2  align="center">¡Que bueno que has vuelto!</h2>
                 <h5>Debes completar todos los campos</h5>
                 <div class="content">
-                    <form align="center" action="confirmacion_entrar.php" method="get">
+                    <form align="center" action="login.php" method="get">
                         Nombre de usuario:
                         <input type="text" name="nombre_usuario" placeholder='Nombre Apellido' required>
+                        <br/>
+                        Número de pasaporte:
+                        <input type="text" name="nro_pasaporte" required>
                         <br/>
                         Contraseña:
                         <input type="password" name="contraseña" required>

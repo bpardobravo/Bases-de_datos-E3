@@ -6,7 +6,7 @@
                 <h2  align="center">¡Registrate y se parte de nuestra asombrosa comunidad de navegantes!</h2>
                 <h5>Debes completar todos los campos</h5>
                 <div class="content">
-                    <form align="center" action="confirmacion_registro.php" method="get">
+                    <form align="center" action="registration.php" method="get">
                         Nombre de usuario:
                         <input type="text" name="nombre_usuario" placeholder='Nombre Apellido' require>
                         <br/>
