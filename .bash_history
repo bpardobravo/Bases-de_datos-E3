@@ -245,3 +245,9 @@ ls
 cd ..
 cd Entrega2
 ls
+git status
+psql
+git status
+cd Entrega2
+ls
+cd ..

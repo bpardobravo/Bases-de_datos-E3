@@ -13,7 +13,9 @@ $fecha_2 = $_POST["fecha_2"];
 $puerto = $_POST["puerto"];
   #Se construye la consulta como un string
   if ($instalacion == 'muelle'){
-    $query = "SELECT * from capacidad_instalacion('" .$fecha_1 ."','" .$fecha_1 ."'," .$puerto .");";
+    $query = "SELECT instalaciones_validas.iid, permisos.atraque FROM permisos, permisootorgado, (SELECT instalaciones.iid from instalaciones, puertosinstalaciones, puertos 
+    where puertos.nombre = $puerto and puertos.pid = puertosinstalaciones.pid and instalaciones.iid = puertosinstalaciones.iid and instalacion.tipo = $instalacion) as instalaciones_validas
+    where permisos.peid = permisootorgado.peid and permisootorga.iid = instalaciones_validas.iid and permisos.atraque = $fecha_1";
   } else {
     $query = "SELECT * from capacidad_instalacion('" .$fecha_1 ."','" .$fecha_2 ."'," .$puerto .");";
   }
