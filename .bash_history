@@ -233,3 +233,15 @@ psql grupo32stored1
 psql
 \q
 exit
+git status
+git add -A
+git commit -m"Se agregan cambios" 
+git push origin main
+git status
+git pull
+ls
+cd Entrega3
+ls
+cd ..
+cd Entrega2
+ls
