@@ -1,5 +1,5 @@
-CREATE OR REPLACE PROCEDURE insertar_capitanes()
-AS
+CREATE OR REPLACE FUNCTION insertar_capitanes ()
+RETURNS void AS
 $$
 BEGIN
     INSERT INTO usuario SELECT pnombre, genero, nro_pasaporte, nacionalidad FROM personal
