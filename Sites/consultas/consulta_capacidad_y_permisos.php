@@ -51,7 +51,7 @@ $puerto = $_POST["puerto"];
                         }
                     ?>
                 </table>
-                <form align="center" action="../acceso/generar_permiso.php" method="get">
+                <form align="center" action="../acceso/generar_permisos.php" method="post">
                         Generar permiso para la instalación:
                         <br/><br/>
                         <?php
