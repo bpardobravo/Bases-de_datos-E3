@@ -72,6 +72,12 @@ $puerto = $_POST["puerto"];
                             echo "<input type='radio' id=$a[0] name='instalacion' value=$a[0]>";
                             echo "<label for=$a[0]>$a[0]</label>";
                         }
+                        if ($instalacion == 'muelle'){
+                            echo "<br/>Descripción cargamento:";
+                            echo "<input type='text' name='descripcion' placeholder='frutas y verduras' required>";
+                        } else {
+                            echo "<input type='hidden' name='descripcion' value=''>";
+                        }
                         echo "<input type='hidden' name='puerto' value='$puerto'>";
                         echo "<input type='hidden' name='patente' value='$patente'>";
                         echo "<input type='hidden' name='fecha_1' value='$fecha_1'>";

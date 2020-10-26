@@ -6,12 +6,12 @@
                 <h2  align="center">¡Registrate y se parte de nuestra asombrosa comunidad de navegantes!</h2>
                 <h5>Debes completar todos los campos</h5>
                 <div class="content">
-                    <form align="center" action="registration.php" method="get">
+                    <form align="center" action="confirmacion_registro.php" method="get">
                         Nombre de usuario:
-                        <input type="text" name="nombre_usuario" placeholder='Nombre Apellido' require>
+                        <input type="text" name="nombre_usuario" placeholder='Nombre Apellido' required>
                         <br/>
                         Edad:
-                        <input type="text" name="edad" placeholder='20' require>
+                        <input type="text" name="edad" placeholder='20' required>
                         <br/>
                         Sexo:
                         <br/>
@@ -23,13 +23,13 @@
                         <label for="other">Otro</label><br>
                         <br/>
                         Nacionalidad:
-                        <input type="text" name="nacionalidad" placeholder='Chile' require>
+                        <input type="text" name="nacionalidad" placeholder='Chile' required>
                         <br/>
                         Número de pasaporte:
-                        <input type="text" name="numero_pasaporte" placeholder='12345678-9' require>
+                        <input type="text" name="numero_pasaporte" placeholder='12345678-9' required>
                         <br/>
                         Contraseña:
-                        <input type="password" name="contraseña" require>
+                        <input type="password" name="contraseña" required>
                         <br/><br/>
                         <input type="submit" value="Registrarme">
                     </form>

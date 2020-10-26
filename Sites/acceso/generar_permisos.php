@@ -10,11 +10,26 @@ $patente = $_POST["patente"];
 $fecha_1 = $_POST["fecha_1"];
 $fecha_2 = $_POST["fecha_2"];
 $puerto = $_POST["puerto"];
+$descripcion = $_POST["descripcion"];
+$maximo = 0;
   #Se construye la consulta como un string
+  $query = "SELECT max(permisos.iid) FROM permisos";
+  $result = $db -> prepare($query);
+	$result -> execute();
+    $permisos = $result -> fetchAll();
+  foreach ($permisos as $p){
+    $maximo = $p[0] + 1;
+  }
+  $query = "INSERT INTO permisos VALUES($maximo, '$fecha_1 00:00:00')";
+  $result = $db -> prepare($query);
+  $query = "INSERT INTO permisootorgado VALUES($maximo, $instalacion, '$patente')";
+  $result = $db -> prepare($query);
   if ($instalacion == 'muelle'){
-    $query = "SELECT instalaciones.iid, instalaciones_validas.cantidad, instalaciones.capacidad from instalaciones, (select instalaciones_validas.iid, count(permisos.atraque) as cantidad from permisos, permisootorgado, (select instalaciones.iid, instalaciones.capacidad from instalaciones, puertosinstalaciones, puertos where puertos.pid = $puerto and puertos.pid = puertosinstalaciones.pid and puertosinstalaciones.iid = instalaciones.iid and instalaciones.tipo = '$instalacion') as instalaciones_validas where permisos.peid = permisootorgado.peid and permisootorgado.iid = instalaciones_validas.iid and permisos.atraque >= '$fecha_1 00:00:00' and permisos.atraque <= '$fecha_1 23:59:59' group by instalaciones_validas.iid, instalaciones_validas.capacidad) as instalaciones_validas WHERE instalaciones.capacidad > instalaciones_validas.cantidad AND instalaciones.iid = instalaciones_validas.iid";
+    $query = "INSERT INTO permisoscargadescarga VALUES($maximo, '$descripcion')";
+    $result = $db -> prepare($query);
   } else {
-    $query = "SELECT instalaciones.iid, instalaciones_validas.cantidad, instalaciones.capacidad from instalaciones, (select instalaciones_validas.iid, count(permisos.atraque) as cantidad from permisos, permisootorgado, (select instalaciones.iid, instalaciones.capacidad from instalaciones, puertosinstalaciones, puertos where puertos.pid = $puerto and puertos.pid = puertosinstalaciones.pid and puertosinstalaciones.iid = instalaciones.iid and instalaciones.tipo = '$instalacion') as instalaciones_validas where permisos.peid = permisootorgado.peid and permisootorgado.iid = instalaciones_validas.iid and permisos.atraque >= '$fecha_1 00:00:00' and permisos.atraque <= '$fecha_2 23:59:59' group by instalaciones_validas.iid, instalaciones_validas.capacidad) as instalaciones_validas WHERE instalaciones.capacidad > instalaciones_validas.cantidad AND instalaciones.iid = instalaciones_validas.iid";
+    $query = "INSERT INTO permisosastillero VALUES($maximo, '$fecha_2 23:59:59')";
+    $result = $db -> prepare($query);
   }
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
 	$result = $db -> prepare($query);
