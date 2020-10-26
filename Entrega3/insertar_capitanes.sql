@@ -1,4 +1,4 @@
-CREATE PROCEDURE insertar_capitan
+CREATE OR REPLACE PROCEDURE insertar_capitanes()
 AS
 $$
 BEGIN
