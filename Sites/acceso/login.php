@@ -19,6 +19,6 @@ if($count) {
 }
 else
 {
-    echo "Este/a usuario/a no existe"
-}
+    echo "Este/a usuario/a no existe";
+};
 ?>

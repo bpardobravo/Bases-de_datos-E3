@@ -9,7 +9,7 @@ if(empty($session_npas) && empty($_SESSION['nro_pasaporte']))
 //echo "";
 }
 else {
-    echo "No se pudo cerrar sesión"
-}
+    echo "No se pudo cerrar sesión";
+};
 
 ?>

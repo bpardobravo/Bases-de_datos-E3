@@ -27,16 +27,10 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
     }
     else {
         echo "Este/a usuario/a ya existe"
-    }
+    };
 
 }
 else {
-    echo 'Por favor ingrese los datos solicitados'
-}
-
-
-
-
-
-
+    echo "Por favor ingrese los datos solicitados";
+};
 ?>
