@@ -1,5 +1,5 @@
-CREATE FUNCTION insertar_capitan ()
-RETURNS void AS
+CREATE PROCEDURE insertar_capitan
+AS
 $$
 BEGIN
     INSERT INTO usuario SELECT pnombre, genero, nro_pasaporte, nacionalidad FROM personal
