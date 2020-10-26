@@ -271,3 +271,14 @@ git status
 git commit -m"procedimiento para insertar personas"
 git push origin main
 psql
+git status
+git add -A
+git commit -m"Se agregan cambios"
+git push
+git push origin main
+git status
+psql
+git status
+git add -A
+git commit -m"se agregan cambios"
+git pull origin main
