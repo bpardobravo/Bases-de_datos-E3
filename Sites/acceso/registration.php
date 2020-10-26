@@ -1,21 +1,20 @@
 <?php
 ob_start();
 require("../config/conexion2.php");
-$name = $_POST["nombre_usuario"];
-$edad = $_POST["edad"];
-$gender = $_POST["gender"];
-$nac = $_POST["nacionalidad"];
-$npas = $_POST["numero_pasaporte"];
-$contraseña = $_POST["contraseña"];
-echo "$name\n";
-echo "$edad";
-echo "$gender";
-echo "$nac";
-echo "$npas";
-echo "$contraseña";
+// $name = $_POST["nombre_usuario"];
+// $edad = $_POST["edad"];
+// $gender = $_POST["gender"];
+// $nac = $_POST["nacionalidad"];
+// $npas = $_POST["numero_pasaporte"];
+// $contraseña = $_POST["contraseña"];
+// echo "$name\n";
+// echo "$edad";
+// echo "$gender";
+// echo "$nac";
+// echo "$npas";
+// echo "$contraseña";
 if(!empty($_POST['numero_pasaporte'])&&!empty($_POST['nombre_usuario'])&&!empty($_POST['edad'])&&!empty($_POST['gender'])&&!empty($_POST['nacionalidad'])&&!empty($_POST['contraseña'])){
 
-// if(!empty($n)){
 
     $name = $_POST["nombre_usuario"];
     $edad = $_POST["edad"];
@@ -25,8 +24,6 @@ if(!empty($_POST['numero_pasaporte'])&&!empty($_POST['nombre_usuario'])&&!empty(
     $contraseña = $_POST["constraseña"];
 
     $st = $db->prepare("SELECT nro_pasaporte FROM user WHERE nro_pasaporte=$npas;"); 
-    // $st->bindname", $username,PDO::PARAM_STR);
-    // $st->bindParam("email", $email,PDO::PARAM_STR);Param("user
     $st->execute();
     $count=$st->rowCount();
 

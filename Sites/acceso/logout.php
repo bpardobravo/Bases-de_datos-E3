@@ -1,4 +1,5 @@
 <?php
+ob_start();
 require("../config/conexion2.php");
 $session_npas='';
 $_SESSION['nro_pasaporte']=''; 
@@ -11,5 +12,5 @@ if(empty($session_npas) && empty($_SESSION['nro_pasaporte']))
 else {
     echo "No se pudo cerrar sesión";
 };
-
+ob_end_flush();
 ?>

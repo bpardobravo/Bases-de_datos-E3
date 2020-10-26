@@ -1,4 +1,5 @@
 <?php
+ob_start();
 require("../config/conexion2.php");
  #Se obtiene el valor del input del usuario
 $name = $_POST["nombre_usuario"];
@@ -21,4 +22,5 @@ else
 {
     echo "Este/a usuario/a no existe";
 };
+ob_end_flush();
 ?>
