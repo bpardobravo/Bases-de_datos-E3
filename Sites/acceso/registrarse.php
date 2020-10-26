@@ -15,9 +15,9 @@
                         <br/>
                         Sexo:
                         <br/>
-                        <input type="radio" id="male" name="gender" value="male">
+                        <input type="radio" id="male" name="gender" value="hombre">
                         <label for="male">Hombre</label>
-                        <input type="radio" id="female" name="gender" value="female">
+                        <input type="radio" id="female" name="gender" value="mujer">
                         <label for="female">Mujer</label>
                         <input type="radio" id="other" name="gender" value="other">
                         <label for="other">Otro</label><br>
