@@ -30,7 +30,7 @@ include('../templates/generic.html');
                         // $sid = session_id();
                         echo "$user";
                         #Se construye la consulta como un string
-                        $query = "SELECT nro_pasaporte, unombre, edad, sexo, nacionalidad FROM usuario WHERE nro_pasaporte = '$user';";
+                        $query = "SELECT nro_pasaporte, unombre, edad, sexo, nacionalidad FROM usuario WHERE nro_pasaporte='$user';";
 
                         #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
                         $result = $db -> prepare($query);
@@ -40,6 +40,7 @@ include('../templates/generic.html');
 
                         if (empty($data)) {
                             echo "esta vacio";
+                            echo "$result";
                         };
 
                         echo "<table>";
