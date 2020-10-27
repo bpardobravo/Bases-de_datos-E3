@@ -287,3 +287,229 @@ ls
 git pull origin master
 git pull origin main
 exit
+git status
+git commit -m"Se agregan cambios"
+git status
+psql
+git status
+git add -A
+git commit -m"se agregan cambios"
+git push origin main
+cd Entrega2
+ls
+cd ..
+psql
+cd Entrega3
+ls
+psql
+cd ..
+git status
+git add -A
+git commit -m"se añaden cambios"
+git push origin main
+git status
+git pull origin main
+cd Entrega3
+ls
+psql
+cd ..
+git status
+git add -A
+git commit -m"se añaden cambios"
+git push origin main
+git status
+git pull origin main
+cd Entrega3
+psql
+cd ..
+git status
+git pull origin main
+git status
+cd Entrega3
+psql
+cd ..
+git status
+git pull origin main
+cd Entrega3
+psql
+cd ..
+git status
+git add -A
+git commit -m"se agregan cambios"
+git push
+git push origin main
+git status
+git pull origin main
+cd Entrega3
+psql
+cd ..
+git status
+git add -A
+git commit -m"se agregan cambios"
+git push origin main
+git status
+git pull origin main
+git status
+git commit -m"agregar contraseña"
+git push origin main
+cd Entrega3
+ls
+psql
+psql
+git pull origin main
+psql
+exxit
+exit
+git pull origin main
+git pull
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exi
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+psql
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+psql
+exit
+git pull origin main
+psql
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+psql
+git pull origin main
+exit
+git pull origin main
+psql
+exit
+psql
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git status
+git pull origin main
+psql
+cd Entrega3
+psql
+cd
+cd ..
+git status
+git pull origin main
+cd Entrega3
+psql
+\quit
+\q
+cd ..
+git pull origin main
+exit
+git pull origin main
+psql
+exit
+git pull origin main
+psql
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+psql
+git pull origin main
+git pull origin main
+psql
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+psql
+exit
+exi
+exit
+git pull origin main
+git pull origin main
+psql
+exit
+exiy
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+psql
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+psql
+exit
+git pull origin main
+exit
