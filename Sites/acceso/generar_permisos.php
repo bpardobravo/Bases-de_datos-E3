@@ -5,47 +5,65 @@
   require("../config/conexion.php");
 
   #Se obtiene el valor del input del usuario
-$instalacion = $_POST["tipo_instalacion"];
+$instalacion = $_POST["instalacion"];
+$instalacion_tipo = $_POST["instalacion_tipo"];
 $patente = $_POST["patente"];
 $fecha_1 = $_POST["fecha_1"];
 $fecha_2 = $_POST["fecha_2"];
 $puerto = $_POST["puerto"];
 $descripcion = $_POST["descripcion"];
 $maximo = 0;
+$ejecuta = 0;
   #Se construye la consulta como un string
-  $query = "SELECT max(permisos.iid) FROM permisos";
+  $query = "SELECT max(peid) FROM permisos";
   $result = $db -> prepare($query);
 	$result -> execute();
     $permisos = $result -> fetchAll();
   foreach ($permisos as $p){
     $maximo = $p[0] + 1;
   }
-  $query = "INSERT INTO permisos VALUES($maximo, '$fecha_1 00:00:00')";
-  $result = $db -> prepare($query);
-  $query = "INSERT INTO permisootorgado VALUES($maximo, $instalacion, '$patente')";
-  $result = $db -> prepare($query);
-  if ($instalacion == 'muelle'){
-    $query = "INSERT INTO permisoscargadescarga VALUES($maximo, '$descripcion')";
-    $result = $db -> prepare($query);
-  } else {
-    $query = "INSERT INTO permisosastillero VALUES($maximo, '$fecha_2 23:59:59')";
-    $result = $db -> prepare($query);
-  }
-  #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
-	$result = $db -> prepare($query);
+  $result = $db -> prepare("SELECT * FROM barco where barco.patente = '$patente'");
 	$result -> execute();
-    $buque = $result -> fetchAll();
+    $permisos = $result -> fetchAll();
+  foreach ($permisos as $p){
+    $result2 = $db -> prepare("INSERT INTO permisos (peid, atraque) VALUES($maximo, '$fecha_1 00:00:00');");
+    $result2 -> execute();
+    $result3 = $db -> prepare("INSERT INTO permisootorgado (peid, iid, patente) VALUES($maximo, $instalacion, '$patente');");
+    $result3 -> execute();
+    if ($instalacion_tipo == 'muelle'){
+      $result4 = $db -> prepare("INSERT INTO permisoscargadescarga (peid, descripcion) VALUES($maximo, '$descripcion');");
+      $result4 -> execute();
+      $ejecuta = 1;
+    } else {
+      $result5 = $db -> prepare("INSERT INTO permisosastillero (peid, salida) VALUES($maximo, '$fecha_2 23:59:59');");
+      $result5 -> execute();
+      $ejecuta = 1;
+    }
+  }
+  
   ?>
     <section id="one" class="wrapper post bg-img" data-bg="Imagen_1">
         <div class="inner">
             <article class="box">
-                <h2  align="center">¡Tu permiso ha sido generado con éxito!</h2>
-                <h5>Puedes seguir navegando por nuestro sitio.</h5>
-                <div class="content">
-                    <form align="center" action="inicio.php" method="get">
-                        <input type="submit" value="Volver a inicio">
-                    </form>
-                </div>
+            <?php
+            if ($ejecuta == 1){
+                  echo "<h2  align='center'>¡Tu permiso ha sido generado con éxito!</h2>";
+                  echo "<h5>Puedes seguir navegando por nuestro sitio.</h5>";
+                  echo "<div class='content'>";
+                  echo "<form align='center' action='inicio.php' method='get'>";
+                  echo "<input type='submit' value='Volver a inicio'>";
+                  echo "</form>";
+                  echo "</div>";
+              } else {
+                  echo "<h2  align='center'>¡No se ha podido generar tu permiso!</h2>";
+                  echo "<h5>Debes ingresar una patente existente</h5>";
+                  echo "<div class='content'>";
+                  echo "<form align='center' action='inicio.php' method='get'>";
+                  echo "<input type='submit' value='Volver a inicio'>";
+                  echo "</form>";
+                  echo "</div>";
+              }
+                ?>
             </article>
         </div>
     </section>

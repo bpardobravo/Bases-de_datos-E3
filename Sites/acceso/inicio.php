@@ -3,7 +3,7 @@
 <!-- Header -->
     <header id="header" class="alt">
         <div class="logo">
-            <p>Hello</p>
+            <p>Grupo 32 - 115 </p>
         </div>
         <a href="perfil.php"><span>Perfil   |</span></a>
         <a href="../index.php"><span>   Salir</span></a>
@@ -16,7 +16,7 @@
                     <h2 align='center'>Buscar a otros navegantes registrados</h2>
                 </header>
                 <div class='content'>
-                    <form align="center" action="perfil_persona.php" method="get">
+                    <form align="center" action="../consultas/consulta_personas.php" method="post">
                         <input type="text" name="nombre_usuario" placeholder='Ingresa un nombre'>
                         <br/>
                         <input type="submit" value="Buscar">
