@@ -17,7 +17,7 @@ if(!empty($_POST['numero_pasaporte'])&&!empty($_POST['nombre_usuario'])&&!empty(
 
 
     $name = $_POST["nombre_usuario"];
-    $edad = $_POST["edad"];
+    $edad = intval($_POST["edad"]);
     $gender = $_POST["gender"];
     $nac = $_POST["nacionalidad"];
     $npas = $_POST["numero_pasaporte"];
@@ -42,10 +42,16 @@ if(!empty($_POST['numero_pasaporte'])&&!empty($_POST['nombre_usuario'])&&!empty(
         $stmt->bindValue(':contraseña', $contrasena);
         
         // execute the insert statement
-        $stmt->execute();
-        session_start();
-        $_SESSION['nro_pasaporte']=$npas;
-        header("Location: perfil.php");
+        if ($stmt->execute()) {
+            session_start();
+            $_SESSION['nro_pasaporte']=$npas;
+            header("Location: perfil.php");
+        }
+        else {
+            
+            echo "pucha no :c"
+        };
+        
     
     }
     else {
