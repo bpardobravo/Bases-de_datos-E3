@@ -66,6 +66,7 @@ include('../templates/generic.html');
                         $result -> execute();
                         $data = $result -> fetchAll();
                         $bid = $data[0];
+                        echo "<table>"
                         echo "<tr>";
                         echo "<th>Datos buque</th>";
                         echo "</tr>";
@@ -77,14 +78,14 @@ include('../templates/generic.html');
                                 echo "<tr><td>Naviera: $d[4]</td></tr>";
                             };
                         };
-
+                        echo "</table>"
                         $query = "SELECT fecha_llegada, punombre FROM buque, proximo_itinerario, puerto WHERE buque.bid = $bid AND buque.bid = proximo_itinerario.bid AND proximo_itinerario.pid = puerto.pid;";
 
                         #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
                         $result = $db -> prepare($query);
                         $result -> execute();
                         $data = $result -> fetchAll();
-                     
+                        echo "<table>"
                         echo "<tr>";
                         echo "<th>Próximo itinerario</th>";
                         echo "</tr>";
@@ -94,14 +95,14 @@ include('../templates/generic.html');
                                 echo "<tr><td>Puerto: $d[1]</td></tr>";
                             };
                         };
-
+                        echo "</table>"
                         $query = "SELECT salida, ingreso, puerto.punombre FROM atraque, puerto WHERE atraque.bid=$bid AND atraque.pid = puerto.pid  ORDER BY ingreso DESC LIMIT 5;";
 
                         #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
                         $result = $db -> prepare($query);
                         $result -> execute();
                         $data = $result -> fetchAll();
-                     
+                        echo "<table>"
                         echo "<tr>";
                         echo "<th>Últimos atraques</th>";
                         echo "</tr>";
@@ -112,7 +113,7 @@ include('../templates/generic.html');
                                 echo "<tr><td>Puerto: $d[2]</td></tr>";
                             };
                         };
-                        
+                        echo "</table>"
                     ?>
                 </div>
             </article>
@@ -140,7 +141,7 @@ include('../templates/generic.html');
                 <div class='content'>
                 
                 <?php
-                    require("../config/conexion.php"); 
+                    // require("../config/conexion.php"); 
                     $user = $_SESSION['nro_pasaporte'];
                     
                     #Se construye la consulta como un string
