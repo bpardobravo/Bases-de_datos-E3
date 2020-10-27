@@ -12,7 +12,7 @@ $stmt = $db->prepare("SELECT nro_pasaporte FROM usuario WHERE unombre=$name AND 
 $stmt->execute();
 $count=$stmt->rowCount();
 $data=$stmt->fetchAll();
-echo "$data['nro_pasaporte']";
+echo "$data->nro_pasaporte";
 if($count) {
     session_start();
     $_SESSION['nro_pasaporte']=$data->nro_pasaporte; // Storing user session value

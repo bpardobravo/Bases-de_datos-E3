@@ -28,11 +28,21 @@ if(!empty($_POST['numero_pasaporte'])&&!empty($_POST['nombre_usuario'])&&!empty(
     $count=$st->rowCount();
 
     if($count<1){
-        $stmt = $db->prepare("INSERT INTO usuario(nro_pasaporte, unombre, edad, sexo, nacionalidad, contraseña) VALUES ($npas, $name, $edad, $gender, $nac, $contrasena);");
+        // $stmt = $db->prepare("INSERT INTO usuario(nro_pasaporte, unombre, edad, sexo, nacionalidad, contraseña) VALUES ($npas, $name, $edad, $gender, $nac, $contrasena);");
+        // $stmt->execute();
+        $sql = "INSERT INTO usuario(nro_pasaporte, unombre, edad, sexo, nacionalidad, contraseña) VALUES (:nro_pasaporte, :unombre, :edad, :sexo, :nacionalidad, :contraseña);";
+        $stmt = $db->prepare($sql);
+        
+        // pass values to the statement
+        $stmt->bindValue(':nro_pasaporte', $npas);
+        $stmt->bindValue(':unombre', $nombre);
+        $stmt->bindValue(':edad', $edad);
+        $stmt->bindValue(':nacionalidad', $nac);
+        $stmt->bindValue(':sexo', $gender);
+        $stmt->bindValue(':contraseña', $contrasena);
+        
+        // execute the insert statement
         $stmt->execute();
-        echo '<script language="javascript">';
-        echo 'alert("$stmt")';
-        echo '</script>';
         session_start();
         $_SESSION['nro_pasaporte']=$npas;
         header("Location: perfil.php");
