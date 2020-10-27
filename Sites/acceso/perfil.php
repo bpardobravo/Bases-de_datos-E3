@@ -65,7 +65,8 @@ include('../templates/generic.html');
                         $result1 = $db -> prepare($query1);
                         $result1 -> execute();
                         $data1 = $result1 -> fetchAll();
-                        $bid = $data1[0];
+                        $bid = intval($data1[0]);
+                        echo "$bid";
                         echo "<table>";
                         echo "<tr>";
                         echo "<th>Datos buque</th>";
@@ -79,6 +80,9 @@ include('../templates/generic.html');
                             };
                         };
                         echo "</table>";
+                        ?>
+                        <?php
+
                         $query2 = "SELECT fecha_llegada, punombre FROM buque, proximo_itinerario, puerto WHERE buque.bid = $bid AND buque.bid = proximo_itinerario.bid AND proximo_itinerario.pid = puerto.pid;";
 
                         #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
@@ -99,12 +103,17 @@ include('../templates/generic.html');
                             };
                         };
                         echo "</table>";
+                        ?>
+                        <?php
                         $query3 = "SELECT salida, ingreso, puerto.punombre FROM atraque, puerto WHERE atraque.bid=$bid AND atraque.pid = puerto.pid  ORDER BY ingreso DESC LIMIT 5;";
 
                         #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
                         $result3 = $db -> prepare($query3);
                         $result3 -> execute();
                         $data3 = $result3 -> fetchAll();
+                        if (empty($data3)) {
+                            echo "esta vacio";
+                        };
                         echo "<table>";
                         echo "<tr>";
                         echo "<th>Últimos atraques</th>";
