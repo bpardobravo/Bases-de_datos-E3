@@ -2,8 +2,7 @@
 ob_start();
 include('../templates/generic.html');  
     #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-    require("../config/conexion2.php"); 
-    // require("../config/conexion.php"); 
+    require("../config/conexion2.php");  
     session_start();
     ob_end_flush();
 ?>
@@ -27,8 +26,7 @@ include('../templates/generic.html');
                     <?php
                         
                         $user = $_SESSION['nro_pasaporte'];
-                        // $sid = session_id();
-                        echo "$user";
+                      
                         #Se construye la consulta como un string
                         $query = "SELECT nro_pasaporte, unombre, edad, sexo, nacionalidad FROM usuario WHERE nro_pasaporte='$user';";
 
@@ -36,17 +34,12 @@ include('../templates/generic.html');
                         $result = $db -> prepare($query);
                         $result -> execute();
                         $data = $result -> fetchAll();
-                        echo "$data[0]";
-
-                        if (empty($data)) {
-                            echo "esta vacio";
-                            // echo "$result";
-                        };
+                     
 
                         echo "<table>";
                       
                         foreach ($data as $d) {
-                            // echo "$d[0]";
+                         
                             echo "<tr><td><p>Número de pasaporte: $d[0]</p></td></tr>";
                             echo "<tr><td>Nombre: $d[1]</td></tr>";
                             echo "<tr><td>Edad: $d[2]</td></tr>";
@@ -92,6 +85,9 @@ include('../templates/generic.html');
                         $result2 = $db -> prepare($query2);
                         $result2 -> execute();
                         $data2 = $result2 -> fetchAll();
+                        if (empty($data2)) {
+                            echo "esta vacio":
+                        };
                         echo "<table>";
                         echo "<tr>";
                         echo "<th>Próximo itinerario</th>";
@@ -148,7 +144,7 @@ include('../templates/generic.html');
                 <div class='content'>
                 
                 <?php
-                    // require("../config/conexion.php"); 
+                    require("../config/conexion.php"); 
                     $user = $_SESSION['nro_pasaporte'];
                     
                     #Se construye la consulta como un string
