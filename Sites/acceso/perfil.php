@@ -74,6 +74,8 @@ include('../templates/generic.html');
                             $bid = "";
                             echo "no";
                         }
+                        echo "$data1[0]";
+                        $bid = intval($data1[0]);
                         echo "$bid";
                         echo "$es_capitan";
                         echo "<h3 align='center'>Datos buque</h3>";
@@ -88,6 +90,7 @@ include('../templates/generic.html');
                             
                             foreach ($data1 as $d) {
                                 echo "<tr>";
+                                echo "$d[0]";
                                 echo "<td>$d[1]</td>";
                                 echo "<td>$d[2]</td>";
                                 echo "<td>$d[3]</td>";
