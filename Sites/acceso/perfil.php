@@ -36,9 +36,9 @@ include('../templates/generic.html');
                         $result = $db -> prepare($query);
                         $result -> execute();
                         $data = $result -> fetchAll();
-                    ?>
-                    <table>
-                        <?php
+                    
+                        echo "<table>";
+                      
                             foreach ($data as $d) {
                                 // echo "$d[0]";
                                 echo "<tr><td><p>Número de pasaporte: $d[0]</p></td></tr>";
@@ -47,8 +47,9 @@ include('../templates/generic.html');
                                 echo "<tr><td>Sexo: $d[3]</td></tr>";
                                 echo "<tr><td>Nacionalidad: $d[4]</td></tr>";
                             };
-                        ?>
-                    </table>
+                        
+                        echo "</table>";
+                    ?>
                 </div>
             </article>
             <article class='box'>
