@@ -15,14 +15,15 @@ $data=$stmt->fetchAll();
 // echo "$data->nro_pasaporte";
 if($count) {
     session_start();
-    $last_id = $db->lastInsertId();
-    $_SESSION['id']=$last_id; // Storing user session value
+    // $last_id = $db->lastInsertId();
+    $_SESSION['nro_pasaporte']=$npas; // Storing user session value
     header("Location: perfil.php");
 
 }
 else
 {
-    echo "Este/a usuario/a no existe";
+    // echo "Este/a usuario/a no existe";
+    header("Location: error_entrar.php");
 };
 ob_end_flush();
 ?>
