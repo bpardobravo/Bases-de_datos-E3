@@ -53,7 +53,7 @@ include('../templates/generic.html');
             </article>
             <article class='box'>
                 <header>
-                    <h2 align="center">Buques de los que es propietari@</h2>
+                    <h2 align="center">Buque donde es capitán</h2>
                 </header>
                 <div class='content'>
                     <?php
@@ -66,7 +66,7 @@ include('../templates/generic.html');
                         $result1 -> execute();
                         $data1 = $result1 -> fetchAll();
                         $bid = intval($data1[0]);
-                        // echo "$bid";
+                      
                         echo "<h3 align='center'>Datos buque</h3>";
                         echo "<table>";
                         echo "<tr>";
@@ -91,6 +91,7 @@ include('../templates/generic.html');
                         <?php
                      
                         global $bid;
+                        
                       
                         $query2 = "SELECT fecha_llegada, punombre FROM buque, proximo_itinerario, puerto WHERE buque.bid = $buq AND buque.bid = proximo_itinerario.bid AND proximo_itinerario.pid = puerto.pid;";
 
@@ -101,15 +102,19 @@ include('../templates/generic.html');
                         // if (empty($data2)) {
                         //     echo "esta vacio";
                         // };
+                        echo "<h3 align='center'>Próximo itinerario</h3>";
                         echo "<table>";
                         echo "<tr>";
-                        echo "<th>Próximo itinerario</th>";
+                        echo "<th>Fecha llegada</th>";
+                        echo "<th>Puerto</th>";
                         echo "</tr>";
                         if ($data2) {
+                            echo "<tr>";
                             foreach ($data2 as $d) {
-                                echo "<tr><td>Fecha llegada: $d[0]</td></tr>";
-                                echo "<tr><td>Puerto: $d[1]</td></tr>";
+                                echo "<td>$d[0]</td>";
+                                echo "<td>$d[1]</td>";
                             };
+                            echo "</tr>";
                         };
                         echo "</table>";
                         ?>
@@ -123,16 +128,21 @@ include('../templates/generic.html');
                         if (empty($data3)) {
                             echo "esta vacio";
                         };
+                        echo "<h3 align='center'>Últimos atraques</h3>";
                         echo "<table>";
                         echo "<tr>";
-                        echo "<th>Últimos atraques</th>";
+                        echo "<th>Ingreso</th>";
+                        echo "<th>Salida</th>";
+                        echo "<th>Puerto</th>";
                         echo "</tr>";
                         if ($data3) {
+                            echo "<tr>";
                             foreach ($data3 as $d) {
-                                echo "<tr><td>Ingreso: $d[1]</td></tr>";
-                                echo "<tr><td>Salida: $d[0]</td></tr>";
-                                echo "<tr><td>Puerto: $d[2]</td></tr>";
+                                echo "<td>$d[1]</td>";
+                                echo "<td>$d[0]</td>";
+                                echo "<td>$d[2]</td>";
                             };
+                            echo "</tr>";
                         };
                         echo "</table>";
                     ?>
