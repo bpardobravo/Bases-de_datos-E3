@@ -3,7 +3,7 @@ ob_start();
 include('../templates/generic.html');  
     #Llama a conexión, crea el objeto PDO y obtiene la variable $db
     require("../config/conexion2.php"); 
-    require("../config/conexion.php"); 
+    // require("../config/conexion.php"); 
     session_start();
     ob_end_flush();
 ?>
