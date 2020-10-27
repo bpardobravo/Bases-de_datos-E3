@@ -20,10 +20,8 @@ if(!empty($_POST['old'])&&!empty($_POST['new'])){
     
         // execute the insert statement
         if ($stmt->execute()) {
-            echo '<script language="javascript">';
-            echo 'alert("contraseña cambiada correctamente")';
-            echo '</script>';
-            header("Location: perfil.php");
+            
+            header("Location: successful_change.php");
         }
         else {
             
