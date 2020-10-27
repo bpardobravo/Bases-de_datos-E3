@@ -21,16 +21,18 @@ if(!empty($_POST['numero_pasaporte'])&&!empty($_POST['nombre_usuario'])&&!empty(
     $gender = $_POST["gender"];
     $nac = $_POST["nacionalidad"];
     $npas = $_POST["numero_pasaporte"];
-    $contraseña = $_POST["constraseña"];
+    $contrasena = $_POST["constraseña"];
 
     $st = $db->prepare("SELECT nro_pasaporte FROM usuario WHERE nro_pasaporte=$npas;"); 
     $st->execute();
     $count=$st->rowCount();
 
     if($count<1){
-        $stmt = $db->prepare("INSERT INTO usuario(nro_pasaporte, unombre, edad, sexo, nacionalidad, contraseña) VALUES ($npas, $name, $edad, $gender, $nac, $contraseña);");
+        $stmt = $db->prepare("INSERT INTO usuario(nro_pasaporte, unombre, edad, sexo, nacionalidad, contraseña) VALUES ($npas, $name, $edad, $gender, $nac, $contrasena);");
         $stmt->execute();
-        echo "huias";
+        echo '<script language="javascript">';
+        echo 'alert("$stmt")';
+        echo '</script>';
         session_start();
         $_SESSION['nro_pasaporte']=$npas;
         header("Location: perfil.php");
