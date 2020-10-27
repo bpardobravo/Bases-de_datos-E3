@@ -24,7 +24,7 @@
                         //     echo '<input type="submit" value="Entrar">';
                         // echo '</form>';
                             
-                        echo '<h2 align="center">Este/a usuario/a no existe</h2>'
+                        echo '<h2 align="center">Este/a usuario/a no existe</h2>';
                         echo '<form align="center" action="entrar.php" method="get">';
                             echo '<br/><br/>';
                             echo '<input type="submit" value="Volver">';
