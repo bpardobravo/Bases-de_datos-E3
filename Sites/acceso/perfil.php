@@ -1,7 +1,10 @@
-<?php include('../templates/generic.html');  
+<?php 
+ob_start();
+include('../templates/generic.html');  
     #Llama a conexión, crea el objeto PDO y obtiene la variable $db
     require("../config/conexion2.php"); 
     session_start();
+    ob_end_flush();
 ?>
 
 <body class="subpage">
