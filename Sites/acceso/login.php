@@ -8,14 +8,14 @@ $contraseña = $_POST["contraseña"];
 
 
 
-$stmt = $db->prepare("SELECT nro_pasaporte FROM usuario WHERE unombre='$name' AND nro_pasaporte='$npas' AND contraseña='$contraseña';"); 
+$stmt = $db->prepare("SELECT id FROM usuario WHERE unombre='$name' AND nro_pasaporte='$npas' AND contraseña='$contraseña';"); 
 $stmt->execute();
 $count=$stmt->rowCount();
 $data=$stmt->fetchAll();
 // echo "$data->nro_pasaporte";
 if($count) {
     session_start();
-    $last_id = $stmt->lastInsertId();
+    $last_id = $db->lastInsertId();
     $_SESSION['id']=$last_id; // Storing user session value
     header("Location: perfil.php");
 
