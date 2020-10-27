@@ -70,7 +70,8 @@ include('../templates/generic.html');
                         if (!empty($es_capitan)) {
                             $bid = intval($data1[0]);
                         };
-                        
+                        echo "$bid";
+                        echo "$es_capitan";
                         echo "<h3 align='center'>Datos buque</h3>";
                         echo "<table>";
                         echo "<tr>";
