@@ -199,8 +199,6 @@ include('../templates/generic.html');
                             echo "<td>$d[0]</td>";
                             echo "</tr>";
                         };
-                    } else {
-                        echo "No tiene ninguna instalación a su cargo";
                     };
                     echo "</table>";
                 ?>
