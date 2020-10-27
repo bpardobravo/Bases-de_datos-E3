@@ -1,13 +1,13 @@
 <?php
 ob_start();
 require("../config/conexion2.php");
-session_start()
+session_start();
 if(!empty($_POST['old'])&&!empty($_POST['new'])){
 
 
     $old = $_POST["old"];
     $new = $_POST["new"];
-    $user = $_SESSION['nro_pasaporte']
+    $user = $_SESSION['nro_pasaporte'];
 
     $st = $db->prepare("SELECT contraseña FROM usuario WHERE contraseña='$old';"); 
     $st->execute();

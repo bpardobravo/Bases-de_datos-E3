@@ -65,18 +65,18 @@ include('../templates/generic.html');
                         $result = $db -> prepare($query);
                         $result -> execute();
                         $data = $result -> fetchAll();
-                        $bid = $data[0]
-                        echo "<tr>"
-                        echo "<th>Datos buque</th>"
-                        echo "</tr>"
+                        $bid = $data[0];
+                        echo "<tr>";
+                        echo "<th>Datos buque</th>";
+                        echo "</tr>";
                         if ($data) {
                             foreach ($data as $d) {
                                 echo "<tr><td>Patente: $d[1]</td></tr>";
                                 echo "<tr><td>Nombre: $d[2]</td></tr>";
                                 echo "<tr><td>Tipo: $d[3]</td></tr>";
                                 echo "<tr><td>Naviera: $d[4]</td></tr>";
-                            }
-                        }
+                            };
+                        };
 
                         $query = "SELECT fecha_llegada, punombre FROM buque, proximo_itinerario, puerto WHERE buque.bid = $bid AND buque.bid = proximo_itinerario.bid AND proximo_itinerario.pid = puerto.pid;";
 
@@ -85,15 +85,15 @@ include('../templates/generic.html');
                         $result -> execute();
                         $data = $result -> fetchAll();
                      
-                        echo "<tr>"
-                        echo "<th>Próximo itinerario</th>"
-                        echo "</tr>"
+                        echo "<tr>";
+                        echo "<th>Próximo itinerario</th>";
+                        echo "</tr>";
                         if ($data) {
                             foreach ($data as $d) {
                                 echo "<tr><td>Fecha llegada: $d[0]</td></tr>";
                                 echo "<tr><td>Puerto: $d[1]</td></tr>";
-                            }
-                        }
+                            };
+                        };
 
                         $query = "SELECT salida, ingreso, puerto.punombre FROM atraque, puerto WHERE atraque.bid=$bid AND atraque.pid = puerto.pid  ORDER BY ingreso DESC LIMIT 5;";
 
@@ -102,16 +102,16 @@ include('../templates/generic.html');
                         $result -> execute();
                         $data = $result -> fetchAll();
                      
-                        echo "<tr>"
-                        echo "<th>Últimos atraques</th>"
-                        echo "</tr>"
+                        echo "<tr>";
+                        echo "<th>Últimos atraques</th>";
+                        echo "</tr>";
                         if ($data) {
                             foreach ($data as $d) {
                                 echo "<tr><td>Ingreso: $d[1]</td></tr>";
                                 echo "<tr><td>Salida: $d[0]</td></tr>";
                                 echo "<tr><td>Puerto: $d[2]</td></tr>";
-                            }
-                        }
+                            };
+                        };
                         
                     ?>
                 </div>
@@ -155,8 +155,8 @@ include('../templates/generic.html');
                         foreach ($data as $d) {
                             echo "<tr><td>Puerto: $d[1]</td></tr>";
                             echo "<tr><td>Tipo de instalación: $d[0]</td></tr>";
-                        }
-                    }
+                        };
+                    };
                 ?>
                     <!-- Insertar la instalación en la que trabaja o un mensaje de que no es dueño)? -->
                 </div>
