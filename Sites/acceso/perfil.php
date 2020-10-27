@@ -66,18 +66,18 @@ include('../templates/generic.html');
                         $result1 -> execute();
                         $data1 = $result1 -> fetchAll();
                         // $bid = "";
-                        $es_capitan = $data1[1];
-                        if (!empty($es_capitan)) {
-                            $bid = intval($data1[0]);
-                            echo "si";
-                        } else {
-                            $bid = "";
-                            echo "no";
-                        }
-                        echo "$data1[0]";
-                        $bid = intval($data1[0]);
-                        echo "$bid";
-                        echo "$es_capitan";
+                        // $es_capitan = $data1[1];
+                        // if (!empty($es_capitan)) {
+                        //     $bid = intval($data1[0]);
+                        //     echo "si";
+                        // } else {
+                        //     $bid = "";
+                        //     echo "no";
+                        // }
+                        // echo "$data1[0]";
+                        // $bid = intval($data1[0]);
+                        // echo "$bid";
+                        // echo "$es_capitan";
                         echo "<h3 align='center'>Datos buque</h3>";
                         echo "<table>";
                         echo "<tr>";
@@ -90,7 +90,7 @@ include('../templates/generic.html');
                             
                             foreach ($data1 as $d) {
                                 echo "<tr>";
-                                echo "$d[0]";
+                                $bid = $d[0];
                                 echo "<td>$d[1]</td>";
                                 echo "<td>$d[2]</td>";
                                 echo "<td>$d[3]</td>";
