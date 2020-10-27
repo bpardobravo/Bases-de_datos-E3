@@ -56,7 +56,7 @@
 
                         // foreach ($data as $d) {
                         //     echo "<tr><td>$d</td></tr>";
-                        }
+                        // }
                     ?> -->
                 </div>
             </article>
