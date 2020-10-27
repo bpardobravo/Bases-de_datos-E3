@@ -1,6 +1,7 @@
 <?php include('../templates/generic.html');  
     #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-    require("../config/conexion2.php"); ?>
+    require("../config/conexion2.php"); 
+?>
 
 <body class="subpage">
 <!-- Acá se podría poner el nombre de la persona o idk jj -->
@@ -34,6 +35,7 @@
                             echo "<tr><td>Edad: $d[2]</td></tr>";
                             echo "<tr><td>Sexo: $d[3]</td></tr>";
                             echo "<tr><td>Nacionalidad: $d[4]</td></tr>";
+                        }
                     ?>
                 </div>
             </article>
@@ -83,5 +85,4 @@
     <script src="../styles/js/skel.min.js"></script>
     <script src="../styles/js/util.js"></script>
     <script src="../styles/js/main.js"></script>
-
-    </body>
+</body>
