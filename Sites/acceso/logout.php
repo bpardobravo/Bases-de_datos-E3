@@ -1,9 +1,9 @@
 <?php
 ob_start();
 require("../config/conexion2.php");
-$session_npas='';
-$_SESSION['nro_pasaporte']=''; 
-if(empty($session_npas) && empty($_SESSION['nro_pasaporte']))
+$session_id='';
+$_SESSION['id']=''; 
+if(empty($session_id) && empty($_SESSION['id']))
 {
     $url=BASE_URL.'index.php';
     header("Location: $url");

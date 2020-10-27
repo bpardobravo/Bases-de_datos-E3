@@ -12,10 +12,11 @@ $stmt = $db->prepare("SELECT nro_pasaporte FROM usuario WHERE unombre='$name' AN
 $stmt->execute();
 $count=$stmt->rowCount();
 $data=$stmt->fetchAll();
-echo "$data->nro_pasaporte";
+// echo "$data->nro_pasaporte";
 if($count) {
     session_start();
-    $_SESSION['nro_pasaporte']=$data->nro_pasaporte; // Storing user session value
+    $last_id = $stmt->lastInsertId();
+    $_SESSION['id']=$last_id; // Storing user session value
     header("Location: perfil.php");
 
 }

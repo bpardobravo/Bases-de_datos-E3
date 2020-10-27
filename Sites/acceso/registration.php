@@ -45,7 +45,8 @@ if(!empty($_POST['numero_pasaporte'])&&!empty($_POST['nombre_usuario'])&&!empty(
         // execute the insert statement
         if ($stmt->execute()) {
             session_start();
-            $_SESSION['nro_pasaporte']=$npas;
+            $last_id = $stmt->lastInsertId();
+            $_SESSION['id']=$last_id;
             header("Location: perfil.php");
         }
         else {
