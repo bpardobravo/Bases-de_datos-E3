@@ -57,7 +57,7 @@ include('../templates/generic.html');
                 </header>
                 <div class='content'>
                     <?php
-                        // $user = $_SESSION['nro_pasaporte'];
+                        
                         #Se construye la consulta como un string
                         $query1 = "SELECT buque.bid, buque.patente, buque.bnombre, buque.tipo, naviera.nnombre FROM usuario, personal, buque, naviera WHERE usuario.nro_pasaporte = personal.nro_pasaporte AND personal.es_capitan = 1 AND personal.bid = buque.bid AND buque.nid = naviera.nid AND usuario.nro_pasaporte = '$user';";
 
@@ -65,19 +65,7 @@ include('../templates/generic.html');
                         $result1 = $db -> prepare($query1);
                         $result1 -> execute();
                         $data1 = $result1 -> fetchAll();
-                        // $bid = "";
-                        // $es_capitan = $data1[1];
-                        // if (!empty($es_capitan)) {
-                        //     $bid = intval($data1[0]);
-                        //     echo "si";
-                        // } else {
-                        //     $bid = "";
-                        //     echo "no";
-                        // }
-                        // echo "$data1[0]";
-                        // $bid = intval($data1[0]);
-                        // echo "$bid";
-                        // echo "$es_capitan";
+                        
                         echo "<h3 align='center'>Datos buque</h3>";
                         echo "<table>";
                         echo "<tr>";
@@ -106,15 +94,13 @@ include('../templates/generic.html');
                         global $bid;
                         
                       
-                        $query2 = "SELECT fecha_llegada, punombre FROM buque, proximo_itinerario, puerto WHERE buque.bid = $buq AND buque.bid = proximo_itinerario.bid AND proximo_itinerario.pid = puerto.pid;";
+                        $query2 = "SELECT fecha_llegada, punombre FROM buque, proximo_itinerario, puerto WHERE buque.bid = $bid AND buque.bid = proximo_itinerario.bid AND proximo_itinerario.pid = puerto.pid;";
 
                         #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
                         $result2 = $db -> prepare($query2);
                         $result2 -> execute();
                         $data2 = $result2 -> fetchAll();
-                        // if (empty($data2)) {
-                        //     echo "esta vacio";
-                        // };
+                        
                         echo "<h3 align='center'>Próximo itinerario</h3>";
                         echo "<table>";
                         echo "<tr>";
@@ -200,8 +186,7 @@ include('../templates/generic.html');
                     $result4 = $db -> prepare($query4);
                     $result4 -> execute();
                     $data4 = $result4 -> fetchAll();
-                    
-                    // echo "<h3 align='center'>Últimos atraques</h3>";
+                 
                     echo "<table>";
                     echo "<tr>";
                     echo "<th>Puerto</th>";
@@ -214,6 +199,8 @@ include('../templates/generic.html');
                             echo "<td>$d[0]</td>";
                             echo "</tr>";
                         };
+                    } else {
+                        echo "No tiene ninguna instalación a su cargo";
                     };
                     echo "</table>";
                 ?>
