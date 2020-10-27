@@ -30,16 +30,16 @@ if(!empty($_POST['numero_pasaporte'])&&!empty($_POST['nombre_usuario'])&&!empty(
     if($count<1){
         // $stmt = $db->prepare("INSERT INTO usuario(nro_pasaporte, unombre, edad, sexo, nacionalidad, contraseña) VALUES ($npas, $name, $edad, $gender, $nac, $contrasena);");
         // $stmt->execute();
-        $sql = "INSERT INTO usuario(nro_pasaporte, unombre, edad, sexo, nacionalidad, contraseña) VALUES (:nro_pasaporte, :unombre, :edad, :sexo, :nacionalidad, :contraseña);";
+        $sql = "INSERT INTO usuario(nro_pasaporte, unombre, edad, sexo, nacionalidad, contraseña) VALUES ('$nro_pasaporte', '$unombre', $edad, '$sexo', '$nacionalidad', '$contraseña');";
         $stmt = $db->prepare($sql);
-        echo "$contrasena";
+        // echo "$contrasena";
         // pass values to the statement
-        $stmt->bindValue(':nro_pasaporte', $npas);
-        $stmt->bindValue(':unombre', $name);
-        $stmt->bindValue(':edad', $edad);
-        $stmt->bindValue(':contraseña', $contrasena);
-        $stmt->bindValue(':sexo', $gender);
-        $stmt->bindValue(':nacionalidad', $nac);
+        // $stmt->bindValue(':nro_pasaporte', $npas);
+        // $stmt->bindValue(':unombre', $name);
+        // $stmt->bindValue(':edad', $edad);
+        // $stmt->bindValue(':contraseña', $contrasena);
+        // $stmt->bindValue(':sexo', $gender);
+        // $stmt->bindValue(':nacionalidad', $nac);
         
         
         // execute the insert statement
