@@ -66,7 +66,7 @@ include('../templates/generic.html');
                         $result1 -> execute();
                         $data1 = $result1 -> fetchAll();
                         $bid = intval($data1[0]);
-                      
+                        echo "$bid";
                         echo "<h3 align='center'>Datos buque</h3>";
                         echo "<table>";
                         echo "<tr>";
@@ -198,8 +198,8 @@ include('../templates/generic.html');
                     if ($data4) {
                         foreach ($data4 as $d) {
                             echo "<tr>";
-                            echo "<tr><td>$d[1]</td></tr>";
-                            echo "<tr><td>$d[0]</td></tr>";
+                            echo "<td>$d[1]</td>";
+                            echo "<td>$d[0]</td>";
                             echo "</tr>";
                         };
                     };
