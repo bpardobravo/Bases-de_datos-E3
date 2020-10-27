@@ -21,7 +21,7 @@ if(!empty($_POST['numero_pasaporte'])&&!empty($_POST['nombre_usuario'])&&!empty(
     $gender = $_POST["gender"];
     $nac = $_POST["nacionalidad"];
     $npas = $_POST["numero_pasaporte"];
-    $contrasena = $_POST["constraseña"];
+    $contrasena = $_POST["contraseña"];
 
     $st = $db->prepare("SELECT nro_pasaporte FROM usuario WHERE nro_pasaporte=$npas;"); 
     $st->execute();
