@@ -44,19 +44,20 @@
                     <h2 align="center">Buques de los que es propietari@</h2>
                 </header>
                 <div class='content'>
-                    <?php
+                    <!-- <?php
 
                         #Se construye la consulta como un string
-                        $query = "";
+                        // $query = "";
 
-                        #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
-                        $result = $db -> prepare($query);
-                        $result -> execute();
-                        $data = $result -> fetchAll();
+                        // #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
+                        // $result = $db -> prepare($query);
+                        // $result -> execute();
+                        // $data = $result -> fetchAll();
 
-                        foreach ($data as $d) {
-                            echo "<tr><td>$d</td></tr>";
-                    ?>
+                        // foreach ($data as $d) {
+                        //     echo "<tr><td>$d</td></tr>";
+                        }
+                    ?> -->
                 </div>
             </article>
             <article class='box'>
