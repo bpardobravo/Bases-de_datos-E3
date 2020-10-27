@@ -49,7 +49,7 @@ if(!empty($_POST['numero_pasaporte'])&&!empty($_POST['nombre_usuario'])&&!empty(
         }
         else {
             
-            echo "pucha no :c"
+            echo "pucha no :c";
         };
         
     
