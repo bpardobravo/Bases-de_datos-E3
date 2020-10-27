@@ -21,6 +21,7 @@
                 <div class='content'>
                     <?php
                         $user = $_SESSION['nro_pasaporte'];
+                        echo "$user";
                         #Se construye la consulta como un string
                         $query = "SELECT nro_pasaporte, unombre, edad, sexo, nacionalidad FROM usuario WHERE nro_pasaporte = '$user';";
 
@@ -28,16 +29,17 @@
                         $result = $db -> prepare($query);
                         $result -> execute();
                         $data = $result -> fetchAll();
-                        ?>
+                    ?>
                     <table>
                         <?php
                             foreach ($data as $d) {
-                                echo "<tr><td>Número de pasaporte: '$d[0]'</td></tr>";
-                                echo "<tr><td>Nombre: '$d[1]'</td></tr>";
+                                echo "$d[0]";
+                                echo "<tr><td><p>Número de pasaporte: $d[0]</p></td></tr>";
+                                echo "<tr><td>Nombre: $d[1]</td></tr>";
                                 echo "<tr><td>Edad: $d[2]</td></tr>";
-                                echo "<tr><td>Sexo: '$d[3]'</td></tr>";
-                                echo "<tr><td>Nacionalidad: '$d[4]'</td></tr>";
-                            }
+                                echo "<tr><td>Sexo: $d[3]</td></tr>";
+                                echo "<tr><td>Nacionalidad: $d[4]</td></tr>";
+                            };
                         ?>
                     </table>
                 </div>
