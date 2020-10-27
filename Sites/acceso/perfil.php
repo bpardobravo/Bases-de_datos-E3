@@ -20,8 +20,10 @@
                 </header>
                 <div class='content'>
                     <?php
+                        session_start()
                         $user = $_SESSION['nro_pasaporte'];
-                        echo "$user";
+                        $sid = session_id()
+                        echo "$sid";
                         #Se construye la consulta como un string
                         $query = "SELECT nro_pasaporte, unombre, edad, sexo, nacionalidad FROM usuario WHERE nro_pasaporte = '$user';";
 
@@ -33,7 +35,7 @@
                     <table>
                         <?php
                             foreach ($data as $d) {
-                                echo "$d[0]";
+                                // echo "$d[0]";
                                 echo "<tr><td><p>Número de pasaporte: $d[0]</p></td></tr>";
                                 echo "<tr><td>Nombre: $d[1]</td></tr>";
                                 echo "<tr><td>Edad: $d[2]</td></tr>";
