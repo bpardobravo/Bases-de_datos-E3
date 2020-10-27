@@ -76,15 +76,16 @@ include('../templates/generic.html');
                         echo "<th>Naviera</th>";
                         echo "</tr>";
                         if ($data1) {
-                            echo "<tr>";
+                            
                             foreach ($data1 as $d) {
+                                echo "<tr>";
                                 echo "<td>$d[1]</td>";
                                 echo "<td>$d[2]</td>";
                                 echo "<td>$d[3]</td>";
                                 echo "<td>$d[4]</td>";
-
+                                echo "</tr>";
                             };
-                            echo "</tr>";
+                            
                         };
                         echo "</table>";
                         ?>
@@ -109,12 +110,14 @@ include('../templates/generic.html');
                         echo "<th>Puerto</th>";
                         echo "</tr>";
                         if ($data2) {
-                            echo "<tr>";
+                            
                             foreach ($data2 as $d) {
+                                echo "<tr>";
                                 echo "<td>$d[0]</td>";
                                 echo "<td>$d[1]</td>";
+                                echo "</tr>";
                             };
-                            echo "</tr>";
+                           
                         };
                         echo "</table>";
                         ?>
@@ -125,9 +128,9 @@ include('../templates/generic.html');
                         $result3 = $db -> prepare($query3);
                         $result3 -> execute();
                         $data3 = $result3 -> fetchAll();
-                        if (empty($data3)) {
-                            echo "esta vacio";
-                        };
+                        // if (empty($data3)) {
+                        //     echo "esta vacio";
+                        // };
                         echo "<h3 align='center'>Últimos atraques</h3>";
                         echo "<table>";
                         echo "<tr>";
@@ -136,13 +139,15 @@ include('../templates/generic.html');
                         echo "<th>Puerto</th>";
                         echo "</tr>";
                         if ($data3) {
-                            echo "<tr>";
+                            
                             foreach ($data3 as $d) {
+                                echo "<tr>";
                                 echo "<td>$d[1]</td>";
                                 echo "<td>$d[0]</td>";
                                 echo "<td>$d[2]</td>";
+                                echo "</tr>";
                             };
-                            echo "</tr>";
+                            
                         };
                         echo "</table>";
                     ?>
