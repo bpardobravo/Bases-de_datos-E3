@@ -66,18 +66,25 @@ include('../templates/generic.html');
                         $result1 -> execute();
                         $data1 = $result1 -> fetchAll();
                         $bid = intval($data1[0]);
-                        echo "$bid";
+                        // echo "$bid";
+                        echo "<h3 align='center'>Datos buque</h3>";
                         echo "<table>";
                         echo "<tr>";
-                        echo "<th>Datos buque</th>";
+                        echo "<th>Patente</th>";
+                        echo "<th>Nombre</th>";
+                        echo "<th>Tipo</th>";
+                        echo "<th>Naviera</th>";
                         echo "</tr>";
                         if ($data1) {
+                            echo "<tr>";
                             foreach ($data1 as $d) {
-                                echo "<tr><td>Patente: $d[1]</td></tr>";
-                                echo "<tr><td>Nombre: $d[2]</td></tr>";
-                                echo "<tr><td>Tipo: $d[3]</td></tr>";
-                                echo "<tr><td>Naviera: $d[4]</td></tr>";
+                                echo "<td>$d[1]</td>";
+                                echo "<td>$d[2]</td>";
+                                echo "<td>$d[3]</td>";
+                                echo "<td>$d[4]</td>";
+
                             };
+                            echo "</tr>";
                         };
                         echo "</table>";
                         ?>
@@ -91,9 +98,9 @@ include('../templates/generic.html');
                         $result2 = $db -> prepare($query2);
                         $result2 -> execute();
                         $data2 = $result2 -> fetchAll();
-                        if (empty($data2)) {
-                            echo "esta vacio";
-                        };
+                        // if (empty($data2)) {
+                        //     echo "esta vacio";
+                        // };
                         echo "<table>";
                         echo "<tr>";
                         echo "<th>Próximo itinerario</th>";
