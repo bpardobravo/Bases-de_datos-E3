@@ -20,9 +20,9 @@
                 </header>
                 <div class='content'>
                     <?php
-                        session_start()
+                        session_start();
                         $user = $_SESSION['nro_pasaporte'];
-                        $sid = session_id()
+                        $sid = session_id();
                         echo "$sid";
                         #Se construye la consulta como un string
                         $query = "SELECT nro_pasaporte, unombre, edad, sexo, nacionalidad FROM usuario WHERE nro_pasaporte = '$user';";
