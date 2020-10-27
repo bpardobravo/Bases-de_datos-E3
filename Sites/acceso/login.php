@@ -2,13 +2,13 @@
 ob_start();
 require("../config/conexion2.php");
  #Se obtiene el valor del input del usuario
-$name = $_POST["nombre_usuario"];
+
 $npas = $_POST["nro_pasaporte"];
 $contraseña = $_POST["contraseña"];
 
 
 
-$stmt = $db->prepare("SELECT id FROM usuario WHERE unombre='$name' AND nro_pasaporte='$npas' AND contraseña='$contraseña';"); 
+$stmt = $db->prepare("SELECT id FROM usuario WHERE nro_pasaporte='$npas' AND contraseña='$contraseña';"); 
 $stmt->execute();
 $count=$stmt->rowCount();
 $data=$stmt->fetchAll();

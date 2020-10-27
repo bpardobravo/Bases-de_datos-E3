@@ -7,9 +7,7 @@
                 <h5>Debes completar todos los campos</h5>
                 <div class="content">
                     <form align="center" action="login.php" method="post">
-                        Nombre de usuario:
-                        <input type="text" name="nombre_usuario" placeholder='Nombre Apellido' required>
-                        <br/>
+                       
                         Número de pasaporte:
                         <input type="text" name="nro_pasaporte" required>
                         <br/>
