@@ -37,16 +37,21 @@ include('../templates/generic.html');
                         $result -> execute();
                         $data = $result -> fetchAll();
                         echo "$data[0]";
+
+                        if (empty($data)) {
+                            echo "esta vacio";
+                        };
+
                         echo "<table>";
                       
-                            foreach ($data as $d) {
-                                // echo "$d[0]";
-                                echo "<tr><td><p>Número de pasaporte: $d[0]</p></td></tr>";
-                                echo "<tr><td>Nombre: $d[1]</td></tr>";
-                                echo "<tr><td>Edad: $d[2]</td></tr>";
-                                echo "<tr><td>Sexo: $d[3]</td></tr>";
-                                echo "<tr><td>Nacionalidad: $d[4]</td></tr>";
-                            };
+                        foreach ($data as $d) {
+                            // echo "$d[0]";
+                            echo "<tr><td><p>Número de pasaporte: $d[0]</p></td></tr>";
+                            echo "<tr><td>Nombre: $d[1]</td></tr>";
+                            echo "<tr><td>Edad: $d[2]</td></tr>";
+                            echo "<tr><td>Sexo: $d[3]</td></tr>";
+                            echo "<tr><td>Nacionalidad: $d[4]</td></tr>";
+                        };
                         
                         echo "</table>";
                     ?>
