@@ -86,7 +86,7 @@ include('../templates/generic.html');
                         $result2 -> execute();
                         $data2 = $result2 -> fetchAll();
                         if (empty($data2)) {
-                            echo "esta vacio":
+                            echo "esta vacio";
                         };
                         echo "<table>";
                         echo "<tr>";
