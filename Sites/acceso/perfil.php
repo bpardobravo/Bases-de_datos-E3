@@ -40,7 +40,7 @@ include('../templates/generic.html');
 
                         if (empty($data)) {
                             echo "esta vacio";
-                            echo "$result";
+                            // echo "$result";
                         };
 
                         echo "<table>";
