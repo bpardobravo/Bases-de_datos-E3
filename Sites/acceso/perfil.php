@@ -36,7 +36,7 @@ include('../templates/generic.html');
                         $result = $db -> prepare($query);
                         $result -> execute();
                         $data = $result -> fetchAll();
-                    
+                        echo "$data[0]";
                         echo "<table>";
                       
                             foreach ($data as $d) {
