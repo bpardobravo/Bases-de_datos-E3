@@ -122,6 +122,7 @@ include('../templates/generic.html');
                         echo "</table>";
                         ?>
                         <?php
+                        global $bid;
                         $query3 = "SELECT salida, ingreso, puerto.punombre FROM atraque, puerto WHERE atraque.bid=$bid AND atraque.pid = puerto.pid  ORDER BY ingreso DESC LIMIT 5;";
 
                         #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
@@ -187,13 +188,22 @@ include('../templates/generic.html');
                     $result4 = $db -> prepare($query4);
                     $result4 -> execute();
                     $data4 = $result4 -> fetchAll();
-                  
+                    
+                    // echo "<h3 align='center'>Últimos atraques</h3>";
+                    echo "<table>";
+                    echo "<tr>";
+                    echo "<th>Puerto</th>";
+                    echo "<th>Tipo de instalación</th>";
+                    echo "</tr>";
                     if ($data4) {
                         foreach ($data4 as $d) {
-                            echo "<tr><td>Puerto: $d[1]</td></tr>";
-                            echo "<tr><td>Tipo de instalación: $d[0]</td></tr>";
+                            echo "<tr>";
+                            echo "<tr><td>$d[1]</td></tr>";
+                            echo "<tr><td>$d[0]</td></tr>";
+                            echo "</tr>";
                         };
                     };
+                    echo "</table>";
                 ?>
                     <!-- Insertar la instalación en la que trabaja o un mensaje de que no es dueño)? -->
                 </div>
