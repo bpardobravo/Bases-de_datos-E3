@@ -28,7 +28,7 @@ include('../templates/generic.html');
                         
                         $user = $_SESSION['nro_pasaporte'];
                         // $sid = session_id();
-                        // echo "$sid";
+                        echo "$user";
                         #Se construye la consulta como un string
                         $query = "SELECT nro_pasaporte, unombre, edad, sexo, nacionalidad FROM usuario WHERE nro_pasaporte = '$user';";
 
@@ -59,19 +59,19 @@ include('../templates/generic.html');
                     <?php
                         // $user = $_SESSION['nro_pasaporte'];
                         #Se construye la consulta como un string
-                        $query = "SELECT buque.bid, buque.patente, buque.bnombre, buque.tipo, naviera.nnombre FROM usuario, personal, buque, naviera WHERE usuario.nro_pasaporte = personal.nro_pasaporte AND personal.es_capitan = 1 AND personal.bid = buque.bid AND buque.nid = naviera.nid AND usuario.nro_pasaporte = '$user';";
+                        $query1 = "SELECT buque.bid, buque.patente, buque.bnombre, buque.tipo, naviera.nnombre FROM usuario, personal, buque, naviera WHERE usuario.nro_pasaporte = personal.nro_pasaporte AND personal.es_capitan = 1 AND personal.bid = buque.bid AND buque.nid = naviera.nid AND usuario.nro_pasaporte = '$user';";
 
                         #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
-                        $result = $db -> prepare($query);
-                        $result -> execute();
-                        $data = $result -> fetchAll();
-                        $bid = $data[0];
+                        $result1 = $db -> prepare($query1);
+                        $result1 -> execute();
+                        $data1 = $result1 -> fetchAll();
+                        $bid = $data1[0];
                         echo "<table>";
                         echo "<tr>";
                         echo "<th>Datos buque</th>";
                         echo "</tr>";
-                        if ($data) {
-                            foreach ($data as $d) {
+                        if ($data1) {
+                            foreach ($data1 as $d) {
                                 echo "<tr><td>Patente: $d[1]</td></tr>";
                                 echo "<tr><td>Nombre: $d[2]</td></tr>";
                                 echo "<tr><td>Tipo: $d[3]</td></tr>";
@@ -79,35 +79,35 @@ include('../templates/generic.html');
                             };
                         };
                         echo "</table>";
-                        $query = "SELECT fecha_llegada, punombre FROM buque, proximo_itinerario, puerto WHERE buque.bid = $bid AND buque.bid = proximo_itinerario.bid AND proximo_itinerario.pid = puerto.pid;";
+                        $query2 = "SELECT fecha_llegada, punombre FROM buque, proximo_itinerario, puerto WHERE buque.bid = $bid AND buque.bid = proximo_itinerario.bid AND proximo_itinerario.pid = puerto.pid;";
 
                         #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
-                        $result = $db -> prepare($query);
-                        $result -> execute();
-                        $data = $result -> fetchAll();
+                        $result2 = $db -> prepare($query2);
+                        $result2 -> execute();
+                        $data2 = $result2 -> fetchAll();
                         echo "<table>";
                         echo "<tr>";
                         echo "<th>Próximo itinerario</th>";
                         echo "</tr>";
-                        if ($data) {
-                            foreach ($data as $d) {
+                        if ($data2) {
+                            foreach ($data2 as $d) {
                                 echo "<tr><td>Fecha llegada: $d[0]</td></tr>";
                                 echo "<tr><td>Puerto: $d[1]</td></tr>";
                             };
                         };
                         echo "</table>";
-                        $query = "SELECT salida, ingreso, puerto.punombre FROM atraque, puerto WHERE atraque.bid=$bid AND atraque.pid = puerto.pid  ORDER BY ingreso DESC LIMIT 5;";
+                        $query3 = "SELECT salida, ingreso, puerto.punombre FROM atraque, puerto WHERE atraque.bid=$bid AND atraque.pid = puerto.pid  ORDER BY ingreso DESC LIMIT 5;";
 
                         #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
-                        $result = $db -> prepare($query);
-                        $result -> execute();
-                        $data = $result -> fetchAll();
+                        $result3 = $db -> prepare($query3);
+                        $result3 -> execute();
+                        $data3 = $result3 -> fetchAll();
                         echo "<table>";
                         echo "<tr>";
                         echo "<th>Últimos atraques</th>";
                         echo "</tr>";
-                        if ($data) {
-                            foreach ($data as $d) {
+                        if ($data3) {
+                            foreach ($data3 as $d) {
                                 echo "<tr><td>Ingreso: $d[1]</td></tr>";
                                 echo "<tr><td>Salida: $d[0]</td></tr>";
                                 echo "<tr><td>Puerto: $d[2]</td></tr>";
@@ -145,15 +145,15 @@ include('../templates/generic.html');
                     $user = $_SESSION['nro_pasaporte'];
                     
                     #Se construye la consulta como un string
-                    $query = "SELECT tipo AS tipo_instalacion, nombre AS nombre_puerto FROM jefeinstalacion, puertosinstalaciones, instalaciones, puertos WHERE jefeinstalacion.rut = '$user' AND jefeinstalacion.iid = puertosinstalaciones.iid AND puertosinstalaciones.iid = instalaciones.iid AND puertosinstalaciones.pid = puertos.pid;";
+                    $query4 = "SELECT tipo AS tipo_instalacion, nombre AS nombre_puerto FROM jefeinstalacion, puertosinstalaciones, instalaciones, puertos WHERE jefeinstalacion.rut = '$user' AND jefeinstalacion.iid = puertosinstalaciones.iid AND puertosinstalaciones.iid = instalaciones.iid AND puertosinstalaciones.pid = puertos.pid;";
 
                     #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
-                    $result = $db -> prepare($query);
-                    $result -> execute();
-                    $data = $result -> fetchAll();
+                    $result4 = $db -> prepare($query4);
+                    $result4 -> execute();
+                    $data4 = $result4 -> fetchAll();
                   
-                    if ($data) {
-                        foreach ($data as $d) {
+                    if ($data4) {
+                        foreach ($data4 as $d) {
                             echo "<tr><td>Puerto: $d[1]</td></tr>";
                             echo "<tr><td>Tipo de instalación: $d[0]</td></tr>";
                         };
