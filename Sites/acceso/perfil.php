@@ -1,6 +1,7 @@
 <?php include('../templates/generic.html');  
     #Llama a conexión, crea el objeto PDO y obtiene la variable $db
     require("../config/conexion2.php"); 
+    session_start();
 ?>
 
 <body class="subpage">
@@ -20,7 +21,7 @@
                 </header>
                 <div class='content'>
                     <?php
-                        session_start();
+                        
                         $user = $_SESSION['nro_pasaporte'];
                         $sid = session_id();
                         echo "$sid";
