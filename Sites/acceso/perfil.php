@@ -82,8 +82,8 @@ include('../templates/generic.html');
                         echo "</table>";
                         ?>
                         <?php
-
-                        $query2 = "SELECT fecha_llegada, punombre FROM buque, proximo_itinerario, puerto WHERE buque.bid = $bid AND buque.bid = proximo_itinerario.bid AND proximo_itinerario.pid = puerto.pid;";
+                        $buq = $GLOBALS['bid'];
+                        $query2 = "SELECT fecha_llegada, punombre FROM buque, proximo_itinerario, puerto WHERE buque.bid = $buq AND buque.bid = proximo_itinerario.bid AND proximo_itinerario.pid = puerto.pid;";
 
                         #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
                         $result2 = $db -> prepare($query2);
