@@ -37,8 +37,8 @@ if(!empty($_POST['numero_pasaporte'])&&!empty($_POST['nombre_usuario'])&&!empty(
         $stmt->bindValue(':nro_pasaporte', $npas);
         $stmt->bindValue(':unombre', $nombre);
         $stmt->bindValue(':edad', $edad);
-        $stmt->bindValue(':nacionalidad', $nac);
         $stmt->bindValue(':sexo', $gender);
+        $stmt->bindValue(':nacionalidad', $nac);
         $stmt->bindValue(':contraseña', $contrasena);
         
         // execute the insert statement

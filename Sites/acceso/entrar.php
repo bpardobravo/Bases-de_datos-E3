@@ -14,7 +14,7 @@
                         <input type="text" name="nro_pasaporte" required>
                         <br/>
                         Contraseña:
-                        <input type="password" name="contraseña" required>
+                        <input type="text" name="contraseña" required>
                         <br/><br/>
                         <input type="submit" value="Entrar">
                     </form>
