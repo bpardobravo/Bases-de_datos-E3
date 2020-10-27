@@ -28,15 +28,18 @@
                         $result = $db -> prepare($query);
                         $result -> execute();
                         $data = $result -> fetchAll();
-
-                        foreach ($data as $d) {
-                            echo "<tr><td>Número de pasaporte: $d[0]</td></tr>";
-                            echo "<tr><td>Nombre: $d[1]</td></tr>";
-                            echo "<tr><td>Edad: $d[2]</td></tr>";
-                            echo "<tr><td>Sexo: $d[3]</td></tr>";
-                            echo "<tr><td>Nacionalidad: $d[4]</td></tr>";
-                        }
-                    ?>
+                        ?>
+                    <table>
+                        <?php
+                            foreach ($data as $d) {
+                                echo "<tr><td>Número de pasaporte: '$d[0]'</td></tr>";
+                                echo "<tr><td>Nombre: '$d[1]'</td></tr>";
+                                echo "<tr><td>Edad: $d[2]</td></tr>";
+                                echo "<tr><td>Sexo: '$d[3]'</td></tr>";
+                                echo "<tr><td>Nacionalidad: '$d[4]'</td></tr>";
+                            }
+                        ?>
+                    </table>
                 </div>
             </article>
             <article class='box'>
