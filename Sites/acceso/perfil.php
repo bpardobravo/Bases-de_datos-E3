@@ -65,8 +65,12 @@ include('../templates/generic.html');
                         $result1 = $db -> prepare($query1);
                         $result1 -> execute();
                         $data1 = $result1 -> fetchAll();
-                        $bid = $data1[0];
-                        echo "$bid";
+                        $bid = "";
+                        $es_capitan = $data1[1];
+                        if (!empty($es_capitan)) {
+                            $bid = intval($data1[0]);
+                        };
+                        
                         echo "<h3 align='center'>Datos buque</h3>";
                         echo "<table>";
                         echo "<tr>";
