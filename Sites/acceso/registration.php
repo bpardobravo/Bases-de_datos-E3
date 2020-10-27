@@ -30,7 +30,7 @@ if(!empty($_POST['numero_pasaporte'])&&!empty($_POST['nombre_usuario'])&&!empty(
     if($count<1){
         // $stmt = $db->prepare("INSERT INTO usuario(nro_pasaporte, unombre, edad, sexo, nacionalidad, contraseña) VALUES ($npas, $name, $edad, $gender, $nac, $contrasena);");
         // $stmt->execute();
-        $sql = "INSERT INTO usuario(nro_pasaporte, unombre, edad, sexo, nacionalidad, contraseña) VALUES ('$nro_pasaporte', '$unombre', $edad, '$sexo', '$nacionalidad', '$contraseña');";
+        $sql = "INSERT INTO usuario(nro_pasaporte, unombre, edad, sexo, nacionalidad, contraseña) VALUES ('$npas', '$name', $edad, '$gender', '$nac', '$contrasena');";
         $stmt = $db->prepare($sql);
         // echo "$contrasena";
         // pass values to the statement
