@@ -513,3 +513,106 @@ psql
 exit
 git pull origin main
 exit
+git status
+git add .
+git commit -m 'update server'
+git push origin main
+git pull origin main
+git push origin main
+psql
+exit
+git push origin main
+git pul origin main
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+psql
+exit
+git pull origin main
+psql
+psql
+\q
+quit
+exit
+git pull origin main
+psql
+git status
+psql
+exit
+git pull origin main
+exit
+git pull origin main
+psql
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+psql
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+psql
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+psql
+git pull origin main
+exit
+ls
+cd Entrega3
+ls
+exit
+psql
+exit
+git pull origin main
+exit
+git pull origin main
+exit
+git pull origin main
+ls
+psql
+git pull origin main
+exit
+ls
+cd Sites
+ls
+psql
+cd Entrega3/
+psql
+\q
+cd ..
+
+\c grupo32e2
+psql
+cd Entrega2
+ls
+cd Entrega2
+ls
+git pull origin main
+cd Entrega2
+ls
+psql
+exit
+git pull origin main
+git push origin main
+ls
+cd Sites
+ls
+cd consultas
+ls
+exit

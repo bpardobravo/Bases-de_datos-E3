@@ -26,11 +26,16 @@
                 <table>
                     <tr>
                     <th>Nombre persona</th>
+                    <th>Perfil</th>
                     </tr>
                     <?php
                         // echo $atraques;
                         foreach ($puerto as $c) {
-                        echo "<tr><td><a href='../acceso/perfil_personas.php?val=$c[1]'>$c[2]</a></td></tr>";
+                        echo "<tr><td>$c[2]</td>";
+                        echo "<form align='center' action='../acceso/perfil_persona.php' method='post'>";
+                        echo "<input type='hidden' name = 'n_pasaporte' value='$c[1]'>";
+                        echo "<td><input type='submit' value='Ver Perfil'></td></tr>";
+                        echo "</form>";
                     }
                     ?>
                     

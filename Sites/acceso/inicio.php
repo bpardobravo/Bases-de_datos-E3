@@ -43,6 +43,56 @@
                     </form>
                 </div>
             </article>
+	    <article class='box'>
+                <header>
+                    <h2 align="center">Revisar mensajes recibidos</h2>
+                </header>
+                <div class='content'>
+                    <form align="center" action="../consultas/consulta_puertos.php" method="get">
+                        <input type="submit" value="Ver">
+                    </form>
+                </div>
+            </article>
+	    <article class='box'>
+                <header>
+                    <h2 align="center">Revisar mensajes enviados</h2>
+                </header>
+                <div class='content'>
+                    <form align="center" action="../consultas/consulta_puertos.php" method="get">
+                        <input type="submit" value="Ver">
+                    </form>
+                </div>
+            </article>
+	    <article class='box'>
+                <header>
+                    <h2 align='center'>Enviar mensaje a un usuario</h2>
+                </header>
+                <div class='content'>
+                    <form align="center" action="../consultas/mensaje_enviado.php" method="post">
+                        <input type="text" name="nombre_receptor" placeholder='Nombre del usuario receptor'>
+			<!--  Quizás sería más fácil pedir directamente el pasaporte del receptor, y usar esos como id -->
+                        <br/>
+			<input type="text" name="Mensaje" placeholder='Mensaje'>
+                        <br/>
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+            </article>
+	    <article class='box'>
+                <header>
+                    <h2 align='center'>Buscar mensajes</h2>
+                </header>
+                <div class='content'>
+                    <form align="center" action="../consultas/consulta_personas.php" method="post">
+                        <input type="text" name="desired" placeholder='Desired'>
+                        <br/>
+			<input type="text" name="required" placeholder='Required'>
+			<br/>
+			<input type="text" name="forbidden" placeholder='Forbidden'>
+                        <input type="submit" value="Buscar">
+                    </form>
+                </div>
+            </article>
         </div>
     </section>
 
