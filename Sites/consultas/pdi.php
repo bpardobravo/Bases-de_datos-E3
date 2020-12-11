@@ -69,6 +69,7 @@ foreach ($response as $message){
         $locations[$message['mid']] = array('lat' => $response['lat'], 'long' => $response['long']);
     };
 };
+echo $locations;
 foreach ($locations as $loc) {
     echo "<tr> <td>$loc[0]</td> <td>$loc[1]</td>";
   };
