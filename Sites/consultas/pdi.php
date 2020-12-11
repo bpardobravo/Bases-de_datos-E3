@@ -21,12 +21,12 @@ $sender = $_SESSION['id'];
 // podriamos hacer que cuando un usuario mande un mensaje por primera vez, llame a create user de la api
 // $arr = array('user_id' => $user_buscar, 'fecha_st' => $fecha1, 'fecha_end' => $fecha2, 'key_words' => array('forbidden' => $forbidden, 'required' => $required, 'desired' => $desired, 'user_id' => $user_buscar));
 // $informacion = json_encode($arr);
-echo $user_buscar;
+// echo $user_buscar;
 $data = array(
     'desired' => $desired,
     'required' => $required,
     'forbidden' => $forbidden,
-    'userId' => intval($user_buscar)
+    'userID' => intval($user_buscar)
 );
 
 $options = array(
