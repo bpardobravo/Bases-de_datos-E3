@@ -42,7 +42,7 @@ $context  = stream_context_create( $options );
 $result = file_get_contents( 'https://barcos.herokuapp.com/text-search', false, $context );
 $response = json_decode($result, true);
 
-echo $response['mid'];
+echo $response[0];
 echo '**************1';
 foreach ($response as $message){
     echo $message['mid'];
