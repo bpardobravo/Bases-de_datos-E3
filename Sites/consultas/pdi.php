@@ -43,6 +43,7 @@ $response = json_decode($result, true);
 
 
 foreach ($response as $message){
+    echo $message;
     $data_m = array(
         'fecha_inicio' => $fecha1,
         'fecha_fin' => $fecha2,
