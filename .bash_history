@@ -616,3 +616,7 @@ ls
 cd consultas
 ls
 exit
+git add .
+git commit -m 'update'
+git push origin main
+exit

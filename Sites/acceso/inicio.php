@@ -78,23 +78,34 @@
                     </form>
                 </div>
             </article>
-	    <article class='box'>
-                <header>
-                    <h2 align='center'>Buscar mensajes</h2>
-                </header>
-                <div class='content'>
-                    <form align="center" action="../consultas/consulta_personas.php" method="post">
-                        <input type="text" name="desired" placeholder='Desired'>
-                        <br/>
-			<input type="text" name="required" placeholder='Required'>
-			<br/>
-			<input type="text" name="forbidden" placeholder='Forbidden'>
-                        <input type="submit" value="Buscar">
-                    </form>
-                </div>
-            </article>
+    <article class='box'>
+        <header>
+            <h2 align="center">Buscar localización mensajes</h2>
+        </header>
+        <div class='content'>
+            <form align="center" action="pdi.php" method="post">
+                Forbidden:
+                <input name="forbidden">
+                <br/>
+                Required:
+                <input name="required">
+                <br/>
+                Desired:
+                <input name="desired">
+                <br/>
+                Id de usuario:
+                <input name="id_user" required>
+                <br/>
+                Fecha inicio:
+                <input name="fecha_1">
+                <br/>
+                Fecha término:
+                <input name="fecha_2">
+                <br/><br/>
+                <input type="submit" value="Buscar">
+            </form>
         </div>
-    </section>
+    </article>
 
 <!-- Scripts -->
     <script src="../styles/js/jquery.min.js"></script>
