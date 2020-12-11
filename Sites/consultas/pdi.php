@@ -42,7 +42,7 @@ $context  = stream_context_create( $options );
 $result = file_get_contents( 'https://barcos.herokuapp.com/text-search', false, $context );
 $response = json_decode($result, true);
 
-
+echo $response;
 foreach ($response as $message){
     echo $message;
     $data_m = array(
@@ -64,6 +64,7 @@ foreach ($response as $message){
     $context  = stream_context_create( $options );
     $result = file_get_contents( 'https://barcos.herokuapp.com/mensajes_por_fecha', false, $context );
     $response = json_decode($result, true);
+    echo $response;
     $locations = array();
     if ($response['success'] == 'true') {
         $locations[$message['mid']] = array('lat' => $response['lat'], 'long' => $response['long']);
