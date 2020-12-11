@@ -64,7 +64,7 @@ foreach ($response as $message){
     $response = json_decode($result, true);
     $locations = array();
     if ($response['success'] == 'true') {
-        $locations[$message['mid']] = array('lat' => $response['lat'], 'long' => $response['long'])
+        $locations[$message['mid']] = array('lat' => $response['lat'], 'long' => $response['long']);
     };
 };
 foreach ($locations as $loc) {
@@ -77,12 +77,12 @@ $query1 = "SELECT puerto.pid, puerto.punombre, coordenada.lat, coordenada.long F
 $result1 = $db -> prepare($query1);
 $result1 -> execute();
 $puertos = $result1 -> fetchAll();
-$loc_puertos = array()
+$loc_puertos = array();
 foreach ($puertos as $p) {
-    $loc_puertos[$p[1]] = array('lat' => $p[2], 'long' => $p[3]) 
+    $loc_puertos[$p[1]] = array('lat' => $p[2], 'long' => $p[3]);
 };
 
-$marker_list = $locations
+$marker_list = $locations;
 // $ch = curl_init();
 // curl_setopt($ch, CURLOPT_URL,"https://barcos.herokuapp.com/send_loc");
 // curl_setopt($ch, CURLOPT_GET, TRUE);
@@ -134,7 +134,7 @@ $marker_list = $locations
         // acá abajo va la lista y todo eso
         <?php foreach($marker_list as $marker) {
         echo
-        'L.marker([' . $marker["lat"] . ',' . $marker["long"] . ']).addTo(mymap);';} ?>
+        'L.marker([' . $marker["lat"] . ',' . $marker["long"] . ']).addTo(mymap);';}; ?>
     </script>
 
 </body>
