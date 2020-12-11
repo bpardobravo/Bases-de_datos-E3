@@ -43,8 +43,10 @@ $result = file_get_contents( 'https://barcos.herokuapp.com/text-search', false, 
 $response = json_decode($result, true);
 
 echo $response;
+echo '**************1';
 foreach ($response as $message){
-    echo $message;
+    echo $message['mid'];
+    echo '**************2';
     $data_m = array(
         'fecha_inicio' => $fecha1,
         'fecha_fin' => $fecha2,
