@@ -48,7 +48,7 @@
                     <h2 align="center">Revisar mensajes recibidos</h2>
                 </header>
                 <div class='content'>
-                    <form align="center" action="../consultas/consulta_puertos.php" method="get">
+                    <form align="center" action="../consultas/mensaje_recibido.php" method="get">
                         <input type="submit" value="Ver">
                     </form>
                 </div>
@@ -58,7 +58,7 @@
                     <h2 align="center">Revisar mensajes enviados</h2>
                 </header>
                 <div class='content'>
-                    <form align="center" action="../consultas/consulta_puertos.php" method="get">
+                    <form align="center" action="../consultas/mensaje_enviado.php" method="get">
                         <input type="submit" value="Ver">
                     </form>
                 </div>
@@ -68,8 +68,8 @@
                     <h2 align='center'>Enviar mensaje a un usuario</h2>
                 </header>
                 <div class='content'>
-                    <form align="center" action="../consultas/mensaje_enviado.php" method="post">
-                        <input type="text" name="nombre_receptor" placeholder='Nombre del usuario receptor'>
+                    <form align="center" action="../consultas/enviar_mensaje.php" method="post">
+                        <input type="text" name="nombre_receptor" placeholder='ID del usuario receptor'>
 			<!--  Quizás sería más fácil pedir directamente el pasaporte del receptor, y usar esos como id -->
                         <br/>
 			<input type="text" name="Mensaje" placeholder='Mensaje'>
@@ -106,6 +106,49 @@
             </form>
         </div>
     </article>
+    <article class='box'>
+        <header>
+            <h2 align="center">Buscar mensajes recibidos</h2>
+        </header>
+        <div class='content'>
+            <form align="center" action="../consultas/pdi.php" method="post">
+                Forbidden:
+                <input type="text" name="forbidden">
+                <br/>
+                Required:
+                <input type="text" name="required">
+                <br/>
+                Desired:
+                <input type="text" name="desired">
+                <br/>
+                Id de usuario:
+                <input type="text" name="id_user" required>
+                <br/>
+                Fecha inicio:
+                <input type="date" name="fecha_1">
+                <br/>
+                Fecha término:
+                <input type="date" name="fecha_2">
+                <br/><br/>
+                <input type="submit" value="Buscar">
+            </form>
+        </div>
+    </article>
+    <article class='box'>
+                <header>
+                    <h2 align='center'>Buscar mensajes</h2>
+                </header>
+                <div class='content'>
+                    <form align="center" action="../consultas/buscar_mensaje.php" method="post">
+                        <input type="text" name="desired" placeholder='Desired'>
+                        <br/>
+                        <input type="text" name="required" placeholder='Required'>
+                        <br/>
+                        <input type="text" name="forbidden" placeholder='Forbidden'>
+                        <input type="submit" value="Buscar">
+                    </form>
+                </div>
+            </article>
 
 <!-- Scripts -->
     <script src="../styles/js/jquery.min.js"></script>
