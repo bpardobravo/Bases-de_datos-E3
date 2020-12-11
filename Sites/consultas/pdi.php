@@ -7,7 +7,7 @@ ob_start();
 include('../templates/generic.html');  
     #Llama a conexión, crea el objeto PDO y obtiene la variable $db
     require("../config/conexion2.php");  
-    session_start();
+    // session_start();
     ob_end_flush();
 $user_buscar = $_POST["id_user"];
 $fecha1 = $_POST["fecha_1"];
@@ -38,7 +38,7 @@ $options = array(
 );
 
 $context  = stream_context_create( $options );
-$result = file_get_contents( 'https://barcos.herokuapp.com/text-search', false, $context );
+$result = file_get_contents( 'https://barcos.herokuapp.com/text-search', $context );
 $response = json_decode($result, true);
 
 
