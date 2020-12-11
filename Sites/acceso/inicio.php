@@ -85,22 +85,22 @@
         <div class='content'>
             <form align="center" action="pdi.php" method="post">
                 Forbidden:
-                <input name="forbidden">
+                <input type="text" name="forbidden">
                 <br/>
                 Required:
-                <input name="required">
+                <input type="text" name="required">
                 <br/>
                 Desired:
-                <input name="desired">
+                <input type="text" name="desired">
                 <br/>
                 Id de usuario:
-                <input name="id_user" required>
+                <input type="text" name="id_user" required>
                 <br/>
                 Fecha inicio:
-                <input name="fecha_1">
+                <input type="date" name="fecha_1">
                 <br/>
                 Fecha término:
-                <input name="fecha_2">
+                <input type="date" name="fecha_2">
                 <br/><br/>
                 <input type="submit" value="Buscar">
             </form>
