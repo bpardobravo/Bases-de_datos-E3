@@ -83,7 +83,7 @@
             <h2 align="center">Buscar localización mensajes</h2>
         </header>
         <div class='content'>
-            <form align="center" action="pdi.php" method="post">
+            <form align="center" action="../consultas/pdi.php" method="post">
                 Forbidden:
                 <input type="text" name="forbidden">
                 <br/>
