@@ -38,7 +38,7 @@ $options = array(
 );
 
 $context  = stream_context_create( $options );
-$result = file_get_contents( 'https://barcos.herokuapp.com/text-search', $context );
+$result = file_get_contents( 'https://barcos.herokuapp.com/text-search', false, $context );
 $response = json_decode($result, true);
 
 
